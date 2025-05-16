@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Danbooru Atom Feed</title>
   <link href="https://danbooru.donmai.us"/>
-  <updated>2025-05-16T05:36:53.647195Z</updated>
+  <updated>2025-05-16T06:00:05.024899Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
 
   <entry>
@@ -161,13 +161,13 @@
     <title>homu_(honkai_impact) kiana_kaslana drawn by huiqian</title>
     <link href="https://danbooru.donmai.us/posts/9139251" rel="alternate"/>
     <link href="https://i.pximg.net/img-original/img/2025/04/12/18/09/34/129226266_p0.png" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/1a/a8/1aa8b69068ff7d9df47eacbd2aa8329d.png" rel="preview"/>
+    <link href="https://cdn.donmai.us/360x360/1a/a8/1aa8b69068ff7d9df47eacbd2aa8329d.jpg" rel="preview"/>
     <id>https://danbooru.donmai.us/posts/9139251</id>
     <updated>2025-04-12T05:18:33.688000-04:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://danbooru.donmai.us/posts/9139251">
-            <img src="https://cdn.donmai.us/360x360/1a/a8/1aa8b69068ff7d9df47eacbd2aa8329d.png" />
+            <img src="https://cdn.donmai.us/360x360/1a/a8/1aa8b69068ff7d9df47eacbd2aa8329d.jpg" />
         </a>
       </div>
     </content>
@@ -270,25 +270,7 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-  <entry>
-    <title>wendy_marvell drawn by aburisamon</title>
-    <link href="https://danbooru.donmai.us/posts/8699625" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2025/01/12/18/45/02/126151421_p0.png" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/f5/9c/f59cbd2763681ccfdc04460b7fb04c1b.png" rel="preview"/>
-    <id>https://danbooru.donmai.us/posts/8699625</id>
-    <updated>2025-01-12T04:47:13.645000-05:00Z</updated>
-    <date>2025-01-12</date>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <a href="https://danbooru.donmai.us/posts/8699625">
-            <img src="https://cdn.donmai.us/360x360/f5/9c/f59cbd2763681ccfdc04460b7fb04c1b.png" />
-        </a>
-      </div>
-    </content>
-    <author>
-      <name>Ace2k1</name>
-    </author>
-  </entry>
+
   <entry>
     <title>drawn by shiokonbu</title>
     <link href="https://danbooru.donmai.us/posts/8647146" rel="alternate"/>
@@ -464,13 +446,13 @@
     <title>ak-12_(faint_light_of_furthest_day)_(girls&#x27;_frontline) ak-12_(girls&#x27;_frontline) drawn by duoyuanjun</title>
     <link href="https://danbooru.donmai.us/posts/7868140" rel="alternate"/>
     <link href="https://cdn.donmai.us/sample/14/f1/sample-14f1723b16743d0021aa68a07d6339d9.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/14/f1/14f1723b16743d0021aa68a07d6339d9.png" rel="preview"/>
+    <link href="https://cdn.donmai.us/360x360/14/f1/14f1723b16743d0021aa68a07d6339d9.jpg" rel="preview"/>
     <id>https://danbooru.donmai.us/posts/7868140</id>
     <updated>2024-07-17T10:02:11.715000-04:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://danbooru.donmai.us/posts/7868140">
-            <img src="https://cdn.donmai.us/360x360/14/f1/14f1723b16743d0021aa68a07d6339d9.png" />
+            <img src="https://cdn.donmai.us/360x360/14/f1/14f1723b16743d0021aa68a07d6339d9.jpg" />
         </a>
       </div>
     </content>
@@ -654,13 +636,13 @@
     <title>ak-12_(girls&#x27;_frontline) ak-12_(lucia)_(girls&#x27;_frontline) drawn by duoyuanjun</title>
     <link href="https://danbooru.donmai.us/posts/6196277" rel="alternate"/>
     <link href="https://cdn.donmai.us/sample/e2/b9/sample-e2b9f8e6c506f67b816af285841bc906.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/e2/b9/e2b9f8e6c506f67b816af285841bc906.png" rel="preview"/>
+    <link href="https://cdn.donmai.us/360x360/e2/b9/e2b9f8e6c506f67b816af285841bc906.jpg" rel="preview"/>
     <id>https://danbooru.donmai.us/posts/6196277</id>
     <updated>2023-04-03T16:30:49.327000-04:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://danbooru.donmai.us/posts/6196277">
-            <img src="https://cdn.donmai.us/360x360/e2/b9/e2b9f8e6c506f67b816af285841bc906.png" />
+            <img src="https://cdn.donmai.us/360x360/e2/b9/e2b9f8e6c506f67b816af285841bc906.jpg" />
         </a>
       </div>
     </content>
@@ -673,13 +655,13 @@
     <title>ak-12_(girls&#x27;_frontline) drawn by duoyuanjun</title>
     <link href="https://danbooru.donmai.us/posts/6196171" rel="alternate"/>
     <link href="https://cdn.donmai.us/sample/da/33/sample-da3334492f71e596af78c5c051d78467.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/da/33/da3334492f71e596af78c5c051d78467.png" rel="preview"/>
+    <link href="https://cdn.donmai.us/360x360/da/33/da3334492f71e596af78c5c051d78467.jpg" rel="preview"/>
     <id>https://danbooru.donmai.us/posts/6196171</id>
     <updated>2023-04-03T15:22:27.252000-04:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://danbooru.donmai.us/posts/6196171">
-            <img src="https://cdn.donmai.us/360x360/da/33/da3334492f71e596af78c5c051d78467.png" />
+            <img src="https://cdn.donmai.us/360x360/da/33/da3334492f71e596af78c5c051d78467.jpg" />
         </a>
       </div>
     </content>
@@ -825,13 +807,13 @@
     <title>ak-12_(faint_light_of_furthest_day)_(girls&#x27;_frontline) ak-12_(girls&#x27;_frontline) drawn by duoyuanjun</title>
     <link href="https://danbooru.donmai.us/posts/4159319" rel="alternate"/>
     <link href="https://cdn.donmai.us/sample/9a/2e/sample-9a2e759eac174a41c735ba61ef0591bf.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/9a/2e/9a2e759eac174a41c735ba61ef0591bf.png" rel="preview"/>
+    <link href="https://cdn.donmai.us/360x360/9a/2e/9a2e759eac174a41c735ba61ef0591bf.jpg" rel="preview"/>
     <id>https://danbooru.donmai.us/posts/4159319</id>
     <updated>2020-10-20T00:16:40.052000-04:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://danbooru.donmai.us/posts/4159319">
-            <img src="https://cdn.donmai.us/360x360/9a/2e/9a2e759eac174a41c735ba61ef0591bf.png" />
+            <img src="https://cdn.donmai.us/360x360/9a/2e/9a2e759eac174a41c735ba61ef0591bf.jpg" />
         </a>
       </div>
     </content>
