@@ -51,7 +51,7 @@ urls = list(reversed([
 
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Danbooru Atom Feed</title>
+  <title>Ace's Danbooru Feed</title>
   <link href="https://danbooru.donmai.us"/>
   <updated>{}</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
