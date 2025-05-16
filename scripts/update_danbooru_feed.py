@@ -59,17 +59,40 @@ def update_feed(file_path, post_ids):
         root = tree.getroot()
         ns = {'atom': ATOM_NS}
 
+        existing_entries = root.findall("atom:entry", ns)
+
+        # Build a dictionary of existing entries by post ID
+        entry_dict = {}
+        for entry in existing_entries:
+            post_url = entry.find("atom:id", ns).text
+            post_id = extract_post_id(post_url)
+            if post_id:
+                entry_dict[post_id] = entry
+
+        # Add new entries
         for post_id in post_ids:
-            print(f"Adding post {post_id}...")
-            entry = generate_entry(post_id)
+            if post_id not in entry_dict:
+                print(f"Adding post {post_id}...")
+                entry = generate_entry(post_id)
+                entry_dict[post_id] = entry
+
+        # Remove all current entries
+        for entry in existing_entries:
+            root.remove(entry)
+
+        # Sort all entries by post ID descending
+        sorted_entries = sorted(entry_dict.items(), key=lambda x: int(x[0]), reverse=True)
+
+        for _, entry in sorted_entries:
             root.append(entry)
 
+        # Update the feed timestamp
         updated_elem = root.find("atom:updated", ns)
         if updated_elem is not None:
             updated_elem.text = datetime.utcnow().isoformat() + 'Z'
 
         tree.write(file_path, encoding="utf-8", xml_declaration=True)
-        print(f"\n✅ Feed updated with {len(post_ids)} new post(s).")
+        print(f"\n✅ Feed updated with {len(post_ids)} new post(s), sorted by ID descending.")
     except Exception as e:
         print(f"❌ Error updating feed: {e}")
 
