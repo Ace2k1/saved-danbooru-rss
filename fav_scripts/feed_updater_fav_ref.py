@@ -208,30 +208,11 @@ if __name__ == "__main__":
 
     # You can replace this with reading from a .txt file or another source
     post_urls = [
-        "https://danbooru.donmai.us/posts/5316884",
-        "https://danbooru.donmai.us/posts/5334975",
-        "https://danbooru.donmai.us/posts/5609393",
-        "https://danbooru.donmai.us/posts/5630519",
-        "https://danbooru.donmai.us/posts/5984560",
-        "https://danbooru.donmai.us/posts/6285097",
-        "https://danbooru.donmai.us/posts/6307201",
-        "https://danbooru.donmai.us/posts/6557284",
-        "https://danbooru.donmai.us/posts/6611132",
-        "https://danbooru.donmai.us/posts/6993529",
-        "https://danbooru.donmai.us/posts/7072600",
-        "https://danbooru.donmai.us/posts/7691323",
-        "https://danbooru.donmai.us/posts/8086519",
-        "https://danbooru.donmai.us/posts/8262321",
-        "https://danbooru.donmai.us/posts/8320180",
-        "https://danbooru.donmai.us/posts/8380262",
-        "https://danbooru.donmai.us/posts/8501737",
-        "https://danbooru.donmai.us/posts/8624391",
-        "https://danbooru.donmai.us/posts/8810032",
-        "https://danbooru.donmai.us/posts/8846253",
-        "https://danbooru.donmai.us/posts/8895250",
-        "https://danbooru.donmai.us/posts/9179953",
-        "https://danbooru.donmai.us/posts/9255073",
-        "https://danbooru.donmai.us/posts/9298662",
+        "https://danbooru.donmai.us/posts/7865853",
+        "https://danbooru.donmai.us/posts/6741019",
+        "https://danbooru.donmai.us/posts/6746224",
+        "https://danbooru.donmai.us/posts/8862059",
+        "https://danbooru.donmai.us/posts/8501737"
     ]
 
     append_multiple_entries(feed_file, post_urls)
