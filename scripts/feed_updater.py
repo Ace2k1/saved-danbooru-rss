@@ -192,7 +192,44 @@ def append_danbooru_entry(feed_path, post_url):
     print(f"Appended post {post_id_from_url} and saved feed to {feed_path}")
 
 # Example usage:
+# if __name__ == "__main__":
+#     feed_file = "danbooru_fav.xml"
+#     post_url_to_add = "https://danbooru.donmai.us/posts/5666182"
+#     append_danbooru_entry(feed_file, post_url_to_add)
+#################################################################################
+def append_multiple_entries(feed_file, post_urls):
+    for url in post_urls:
+        append_danbooru_entry(feed_file, url)
+
 if __name__ == "__main__":
     feed_file = "danbooru_fav.xml"
-    post_url_to_add = "https://danbooru.donmai.us/posts/5666182"
-    append_danbooru_entry(feed_file, post_url_to_add)
+
+    # You can replace this with reading from a .txt file or another source
+    post_urls = [
+        "https://danbooru.donmai.us/posts/5316884",
+        "https://danbooru.donmai.us/posts/5334975",
+        "https://danbooru.donmai.us/posts/5609393",
+        "https://danbooru.donmai.us/posts/5630519",
+        "https://danbooru.donmai.us/posts/5984560",
+        "https://danbooru.donmai.us/posts/6285097",
+        "https://danbooru.donmai.us/posts/6307201",
+        "https://danbooru.donmai.us/posts/6557284",
+        "https://danbooru.donmai.us/posts/6611132",
+        "https://danbooru.donmai.us/posts/6993529",
+        "https://danbooru.donmai.us/posts/7072600",
+        "https://danbooru.donmai.us/posts/7691323",
+        "https://danbooru.donmai.us/posts/8086519",
+        "https://danbooru.donmai.us/posts/8262321",
+        "https://danbooru.donmai.us/posts/8320180",
+        "https://danbooru.donmai.us/posts/8380262",
+        "https://danbooru.donmai.us/posts/8501737",
+        "https://danbooru.donmai.us/posts/8624391",
+        "https://danbooru.donmai.us/posts/8810032",
+        "https://danbooru.donmai.us/posts/8846253",
+        "https://danbooru.donmai.us/posts/8895250",
+        "https://danbooru.donmai.us/posts/9179953",
+        "https://danbooru.donmai.us/posts/9255073",
+        "https://danbooru.donmai.us/posts/9298662",
+    ]
+
+    append_multiple_entries(feed_file, post_urls)
