@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 from email.utils import format_datetime
 from html import escape
 urls = list(reversed([
@@ -55,7 +55,7 @@ feed = '''<?xml version="1.0" encoding="utf-8"?>
   <link href="https://danbooru.donmai.us"/>
   <updated>{}</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
-'''.format(datetime.utcnow().isoformat() + 'Z')
+'''.format(datetime.utcnow().replace(tzinfo=timezone.utc).isoformat().replace('+00:00', 'Z'))
 
 for url in urls:
     post_id = url.split("/")[-1]
@@ -86,7 +86,9 @@ for url in urls:
         title = f"{characters} drawn by {artist}".strip() or f"Post {post_id}"
 
         created_at = data.get("created_at", "2025-01-01T00:00:00Z")
-        updated = datetime.fromisoformat(created_at.rstrip("Z")).isoformat() + 'Z'
+        created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
+        # updated = datetime.fromisoformat(created_at.rstrip("Z")).isoformat() + 'Z'
+        updated = created_dt.isoformat().replace('+00:00', 'Z')
         print(f'Creating post of {post_id}')
         feed += f'''
   <entry>
