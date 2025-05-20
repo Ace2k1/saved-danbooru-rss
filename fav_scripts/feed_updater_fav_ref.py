@@ -208,11 +208,22 @@ if __name__ == "__main__":
 
     # You can replace this with reading from a .txt file or another source
     post_urls = [
-        "https://danbooru.donmai.us/posts/7865853",
-        "https://danbooru.donmai.us/posts/6741019",
-        "https://danbooru.donmai.us/posts/6746224",
-        "https://danbooru.donmai.us/posts/8862059",
-        "https://danbooru.donmai.us/posts/8501737"
+        "https://danbooru.donmai.us/posts/4133712",
+        "https://danbooru.donmai.us/posts/5048288",
+        "https://danbooru.donmai.us/posts/5950799",
+        "https://danbooru.donmai.us/posts/6314939",
+        "https://danbooru.donmai.us/posts/6566350",
+        "https://danbooru.donmai.us/posts/7134112",
+        "https://danbooru.donmai.us/posts/7966454",
+        "https://danbooru.donmai.us/posts/8003928",
+        "https://danbooru.donmai.us/posts/8614576",
+        "https://danbooru.donmai.us/posts/8647146",
+        "https://danbooru.donmai.us/posts/8695013",
+        "https://danbooru.donmai.us/posts/8733499",
+        "https://danbooru.donmai.us/posts/9058666",
+        "https://danbooru.donmai.us/posts/9078272",
+        "https://danbooru.donmai.us/posts/9182468",
+        "https://danbooru.donmai.us/posts/9183661",
+        "https://danbooru.donmai.us/posts/9183678"
     ]
-
     append_multiple_entries(feed_file, post_urls)
