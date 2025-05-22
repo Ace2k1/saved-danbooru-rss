@@ -9,7 +9,7 @@ NS_XHTML = "http://www.w3.org/1999/xhtml"
 ET.register_namespace('', NS_ATOM)
 
 FEED_ID = "tag:danbooru.donmai.us,2025:/feed"
-FEED_TITLE = "Ace's Danbooru Feed"
+FEED_TITLE = "Ace's Danbooru Feed High Res"
 FEED_LINK = "https://danbooru.donmai.us"
 def get_entry_post_id(entry, default_post_id=0):
     id_elem = entry.find(f"{{{NS_ATOM}}}id")

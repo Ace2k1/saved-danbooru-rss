@@ -1,7 +1,12 @@
 import requests
 from datetime import datetime, timezone
 from html import escape
-urls = list([
+urls = list(
+  [
+    "https://danbooru.donmai.us/posts/9344166",
+    "https://danbooru.donmai.us/posts/9343929",
+    "https://danbooru.donmai.us/posts/9343884",
+    "https://danbooru.donmai.us/posts/9342582",
     "https://danbooru.donmai.us/posts/9315003",
     "https://danbooru.donmai.us/posts/9309263",
     "https://danbooru.donmai.us/posts/9281207",
@@ -96,11 +101,12 @@ urls = list([
     "https://danbooru.donmai.us/posts/4133712",
     "https://danbooru.donmai.us/posts/3346440",
     "https://danbooru.donmai.us/posts/3314284",
-])
+  ]
+)
 
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ace's Danbooru Feed Reference</title>
+  <title>Ace's Danbooru Feed Reference High Res</title>
   <link href="https://danbooru.donmai.us"/>
   <updated>{}</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
@@ -139,26 +145,31 @@ for url in urls:
         # updated = datetime.fromisoformat(created_at.rstrip("Z")).isoformat() + 'Z'
         updated = created_dt.isoformat().replace('+00:00', 'Z')
         print(f'Creating post of {post_id}')
+
+        extra_image = ''
+        if url == "https://danbooru.donmai.us/posts/9343884":
+          extra_image = '\n' + ' ' * 18 + '<img src="https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg"/>'
+
         feed += f'''
-  <entry>
-    <title>{escape(title)}</title>
-    <link href="{url}" rel="alternate"/>
-    <link href="{related_url}" rel="related"/>
-    <link href="{thumb_url}" rel="preview"/>
-    <id>{url}</id>
-    <updated>{updated}</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <a href="{url}">
-            <img src="{thumb_url}" />
-        </a>
-      </div>
-    </content>
-    <author>
-      <name>Ace2k1</name>
-    </author>
-  </entry>
-'''
+          <entry>
+            <title>{escape(title)}</title>
+            <link href="{url}" rel="alternate"/>
+            <link href="{related_url}" rel="related"/>
+            <link href="{thumb_url}" rel="preview"/>
+            <id>{url}</id>
+            <updated>{updated}</updated>
+            <content type="xhtml">
+              <div xmlns="http://www.w3.org/1999/xhtml">
+                <a href="{url}">
+                  <img src="{thumb_url}"/>{extra_image}
+                </a>
+              </div>
+            </content>
+            <author>
+              <name>Ace2k1</name>
+            </author>
+          </entry>
+        '''
     except Exception as e:
         print(f"Error on post {post_id}: {e}")
 

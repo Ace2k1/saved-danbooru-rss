@@ -1,13 +1,14 @@
 import xml.etree.ElementTree as ET
 import os
 # Input XML file
-xml_file = 'danbooru_ref_fav_fullres.xml'
+xml_file = 'danbooru_fav.xml'
 # Output path
-path = 'fav_scripts full res/txts'
+path = 'scripts/txts'
 # Output files
 list_output_file = os.path.join(path, 'danbooru_post_links_list.txt')
 array_output_file = os.path.join(path, 'danbooru_post_links_array.txt')
 os.makedirs(path, exist_ok=True)
+
 # Parse the XML
 tree = ET.parse(xml_file)
 root = tree.getroot()
