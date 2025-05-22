@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us"/>
-  <updated>2025-05-22T08:16:55.968219Z</updated>
+  <updated>2025-05-22T17:04:05.086297Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
 
           <entry>
@@ -1470,6 +1470,25 @@
           </entry>
         
           <entry>
+            <title>drawn by satou_kuuki</title>
+            <link href="https://danbooru.donmai.us/posts/5984215" rel="alternate"/>
+            <link href="https://cdn.donmai.us/sample/53/5e/sample-535e7b59e3a4e6eced1dd0eb710457f2.jpg" rel="related"/>
+            <link href="https://cdn.donmai.us/360x360/53/5e/535e7b59e3a4e6eced1dd0eb710457f2.jpg" rel="preview"/>
+            <id>https://danbooru.donmai.us/posts/5984215</id>
+            <updated>2023-01-15T01:03:21.325000Z</updated>
+            <content type="xhtml">
+              <div xmlns="http://www.w3.org/1999/xhtml">
+                <a href="https://danbooru.donmai.us/posts/5984215">
+                  <img src="https://cdn.donmai.us/360x360/53/5e/535e7b59e3a4e6eced1dd0eb710457f2.jpg"/>
+                </a>
+              </div>
+            </content>
+            <author>
+              <name>Ace2k1</name>
+            </author>
+          </entry>
+        
+          <entry>
             <title>nonohara_yuka drawn by shiokonbu</title>
             <link href="https://danbooru.donmai.us/posts/5950799" rel="alternate"/>
             <link href="https://i.pximg.net/img-original/img/2023/01/03/15/32/06/104196885_p0.jpg" rel="related"/>
@@ -1793,6 +1812,25 @@
           </entry>
         
           <entry>
+            <title>asaba_ibuki_(satou_kuuki) shirosaki_koharu_(satou_kuuki) drawn by satou_kuuki</title>
+            <link href="https://danbooru.donmai.us/posts/4705657" rel="alternate"/>
+            <link href="https://cdn.donmai.us/sample/49/54/sample-49544917b962db9e8e6b24918a6fe3c3.jpg" rel="related"/>
+            <link href="https://cdn.donmai.us/360x360/49/54/49544917b962db9e8e6b24918a6fe3c3.jpg" rel="preview"/>
+            <id>https://danbooru.donmai.us/posts/4705657</id>
+            <updated>2021-08-15T06:03:31.907000Z</updated>
+            <content type="xhtml">
+              <div xmlns="http://www.w3.org/1999/xhtml">
+                <a href="https://danbooru.donmai.us/posts/4705657">
+                  <img src="https://cdn.donmai.us/360x360/49/54/49544917b962db9e8e6b24918a6fe3c3.jpg"/>
+                </a>
+              </div>
+            </content>
+            <author>
+              <name>Ace2k1</name>
+            </author>
+          </entry>
+        
+          <entry>
             <title>kiana_kaslana drawn by huiqian</title>
             <link href="https://danbooru.donmai.us/posts/4681891" rel="alternate"/>
             <link href="https://i.pximg.net/img-original/img/2021/08/04/15/53/13/91720876_p0.jpg" rel="related"/>
@@ -1822,6 +1860,25 @@
               <div xmlns="http://www.w3.org/1999/xhtml">
                 <a href="https://danbooru.donmai.us/posts/4133712">
                   <img src="https://cdn.donmai.us/360x360/4e/c4/4ec47ae32a6accd2b950f9fc63c4b493.jpg"/>
+                </a>
+              </div>
+            </content>
+            <author>
+              <name>Ace2k1</name>
+            </author>
+          </entry>
+        
+          <entry>
+            <title>suzumori_mizuki drawn by satou_kuuki</title>
+            <link href="https://danbooru.donmai.us/posts/3375628" rel="alternate"/>
+            <link href="https://i.pximg.net/img-original/img/2019/01/07/00/00/12/72535059_p1.jpg" rel="related"/>
+            <link href="https://cdn.donmai.us/360x360/3a/40/3a40d18630fe7b8aa9e093d9c361ea9b.jpg" rel="preview"/>
+            <id>https://danbooru.donmai.us/posts/3375628</id>
+            <updated>2019-01-06T11:20:22.664000Z</updated>
+            <content type="xhtml">
+              <div xmlns="http://www.w3.org/1999/xhtml">
+                <a href="https://danbooru.donmai.us/posts/3375628">
+                  <img src="https://cdn.donmai.us/360x360/3a/40/3a40d18630fe7b8aa9e093d9c361ea9b.jpg"/>
                 </a>
               </div>
             </content>
