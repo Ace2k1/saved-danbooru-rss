@@ -49,12 +49,13 @@ def entry_exists(root, post_id):
 def create_entry_element(post_id, url, data):
     md5 = data["md5"]
     ext = data["file_ext"]
-    thumb_url = f"https://cdn.donmai.us/360x360/{md5[0:2]}/{md5[2:4]}/{md5}.{ext}"
+    compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+    thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.{ext}"
     # Validate thumb_url exists, else fallback to jpg
     try:
         resp = requests.head(thumb_url)
         if resp.status_code != 200 and ext != "jpg":
-            thumb_url = f"https://cdn.donmai.us/360x360/{md5[0:2]}/{md5[2:4]}/{md5}.jpg"
+            thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.jpg"
     except:
         # On any error, keep thumb_url as is
         pass
@@ -68,9 +69,11 @@ def create_entry_element(post_id, url, data):
 
     characters = data.get("tag_string_character", "").strip()
     artist = data.get("tag_string_artist", "").strip()
-    title = (characters + " drawn by " + artist).strip()
-    if not title:
-        title = f"Post {post_id}"
+    characterExist = bool(characters.strip())
+    prefixTitle = characters if characterExist else f"Post {post_id}"
+    title = f"{prefixTitle} drawn by {artist}".strip()
+    if characterExist:
+        title += f" ({post_id})"
 
     created_at = data.get("created_at", "2025-01-01T00:00:00Z")
     # Format updated to preserve timezone if present
@@ -207,23 +210,5 @@ if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
 
     # You can replace this with reading from a .txt file or another source
-    post_urls = [
-        "https://danbooru.donmai.us/posts/4133712",
-        "https://danbooru.donmai.us/posts/5048288",
-        "https://danbooru.donmai.us/posts/5950799",
-        "https://danbooru.donmai.us/posts/6314939",
-        "https://danbooru.donmai.us/posts/6566350",
-        "https://danbooru.donmai.us/posts/7134112",
-        "https://danbooru.donmai.us/posts/7966454",
-        "https://danbooru.donmai.us/posts/8003928",
-        "https://danbooru.donmai.us/posts/8614576",
-        "https://danbooru.donmai.us/posts/8647146",
-        "https://danbooru.donmai.us/posts/8695013",
-        "https://danbooru.donmai.us/posts/8733499",
-        "https://danbooru.donmai.us/posts/9058666",
-        "https://danbooru.donmai.us/posts/9078272",
-        "https://danbooru.donmai.us/posts/9182468",
-        "https://danbooru.donmai.us/posts/9183661",
-        "https://danbooru.donmai.us/posts/9183678"
-    ]
+    post_urls = []
     append_multiple_entries(feed_file, post_urls)

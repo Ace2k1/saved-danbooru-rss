@@ -163,8 +163,11 @@ for url in urls:
 
         characters = data.get("tag_string_character", "")
         artist = data.get("tag_string_artist", "")
-        title = f"{characters} drawn by {artist}".strip() or f"Post {post_id}"
-
+        characterExist = bool(characters.strip())
+        prefixTitle = characters if characterExist else f"Post {post_id}"
+        title = f"{prefixTitle} drawn by {artist}".strip()
+        if characterExist:
+          title += f" ({post_id})"
         created_at = data.get("created_at", "2025-01-01T00:00:00Z")
         created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
         # updated = datetime.fromisoformat(created_at.rstrip("Z")).isoformat() + 'Z'
