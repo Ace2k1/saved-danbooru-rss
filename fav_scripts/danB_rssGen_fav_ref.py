@@ -149,12 +149,13 @@ for url in urls:
 
         md5 = data["md5"]
         ext = data["file_ext"]
-        thumb_url = f"https://cdn.donmai.us/360x360/{md5[0:2]}/{md5[2:4]}/{md5}.{ext}"
+        compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+        thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.{ext}"
         thumb_response = requests.head(thumb_url)
         if thumb_response.status_code != 200 and ext != "jpg":
             # Try fallback to jpg
             thumb_ext = "jpg"
-            thumb_url = f"https://cdn.donmai.us/360x360/{md5[0:2]}/{md5[2:4]}/{md5}.{thumb_ext}"
+            thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.{thumb_ext}"
         # Full image
         full_url = data.get("large_file_url") or data.get("file_url")
         if full_url and full_url.startswith("/"):
@@ -168,7 +169,7 @@ for url in urls:
         prefixTitle = characters if characterExist else f"Post {post_id}"
         title = f"{prefixTitle} drawn by {artist}".strip()
         if characterExist:
-          title += f" ({post_id})"
+          title += f" - ID {post_id}"
         created_at = data.get("created_at", "2025-01-01T00:00:00Z")
         created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
         # updated = datetime.fromisoformat(created_at.rstrip("Z")).isoformat() + 'Z'

@@ -73,7 +73,7 @@ def create_entry_element(post_id, url, data):
     prefixTitle = characters if characterExist else f"Post {post_id}"
     title = f"{prefixTitle} drawn by {artist}".strip()
     if characterExist:
-        title += f" ({post_id})"
+        title += f" - ID {post_id}"
 
     created_at = data.get("created_at", "2025-01-01T00:00:00Z")
     # Format updated to preserve timezone if present
