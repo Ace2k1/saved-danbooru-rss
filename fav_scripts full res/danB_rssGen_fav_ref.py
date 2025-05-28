@@ -3,13 +3,18 @@ from datetime import datetime, timezone
 from html import escape
 urls = list(
   [
+    "https://danbooru.donmai.us/posts/9364776",
+    "https://danbooru.donmai.us/posts/9364774",
+    "https://danbooru.donmai.us/posts/9350277",
     "https://danbooru.donmai.us/posts/9344166",
     "https://danbooru.donmai.us/posts/9343929",
     "https://danbooru.donmai.us/posts/9343884",
     "https://danbooru.donmai.us/posts/9342582",
+    "https://danbooru.donmai.us/posts/9335603",
     "https://danbooru.donmai.us/posts/9315003",
     "https://danbooru.donmai.us/posts/9309263",
     "https://danbooru.donmai.us/posts/9281207",
+    "https://danbooru.donmai.us/posts/9271280",
     "https://danbooru.donmai.us/posts/9259171",
     "https://danbooru.donmai.us/posts/9255073",
     "https://danbooru.donmai.us/posts/9249317",
@@ -60,6 +65,7 @@ urls = list(
     "https://danbooru.donmai.us/posts/7370071",
     "https://danbooru.donmai.us/posts/7370022",
     "https://danbooru.donmai.us/posts/7290005",
+    "https://danbooru.donmai.us/posts/7260871",
     "https://danbooru.donmai.us/posts/7161239",
     "https://danbooru.donmai.us/posts/7157242",
     "https://danbooru.donmai.us/posts/7134112",
@@ -72,23 +78,30 @@ urls = list(
     "https://danbooru.donmai.us/posts/6787393",
     "https://danbooru.donmai.us/posts/6746224",
     "https://danbooru.donmai.us/posts/6741019",
+    "https://danbooru.donmai.us/posts/6731119",
     "https://danbooru.donmai.us/posts/6695180",
+    "https://danbooru.donmai.us/posts/6624998",
+    "https://danbooru.donmai.us/posts/6620370",
     "https://danbooru.donmai.us/posts/6611132",
     "https://danbooru.donmai.us/posts/6566350",
     "https://danbooru.donmai.us/posts/6557284",
     "https://danbooru.donmai.us/posts/6314939",
     "https://danbooru.donmai.us/posts/6307201",
     "https://danbooru.donmai.us/posts/6021128",
+    "https://danbooru.donmai.us/posts/6011055",
     "https://danbooru.donmai.us/posts/5984560",
+    "https://danbooru.donmai.us/posts/5984215",
     "https://danbooru.donmai.us/posts/5950799",
     "https://danbooru.donmai.us/posts/5869785",
     "https://danbooru.donmai.us/posts/5834380",
     "https://danbooru.donmai.us/posts/5786630",
     "https://danbooru.donmai.us/posts/5786575",
+    "https://danbooru.donmai.us/posts/5775434",
     "https://danbooru.donmai.us/posts/5748467",
     "https://danbooru.donmai.us/posts/5698872",
     "https://danbooru.donmai.us/posts/5609393",
     "https://danbooru.donmai.us/posts/5533131",
+    "https://danbooru.donmai.us/posts/5510065",
     "https://danbooru.donmai.us/posts/5371927",
     "https://danbooru.donmai.us/posts/5350149",
     "https://danbooru.donmai.us/posts/5312834",
@@ -97,13 +110,25 @@ urls = list(
     "https://danbooru.donmai.us/posts/5158945",
     "https://danbooru.donmai.us/posts/5089699",
     "https://danbooru.donmai.us/posts/5048288",
+    "https://danbooru.donmai.us/posts/5006429",
+    "https://danbooru.donmai.us/posts/4705657",
     "https://danbooru.donmai.us/posts/4681891",
+    "https://danbooru.donmai.us/posts/4624471",
+    "https://danbooru.donmai.us/posts/4565933",
+    "https://danbooru.donmai.us/posts/4520870",
+    "https://danbooru.donmai.us/posts/4489953",
     "https://danbooru.donmai.us/posts/4133712",
+    "https://danbooru.donmai.us/posts/3375628",
     "https://danbooru.donmai.us/posts/3346440",
-    "https://danbooru.donmai.us/posts/3314284",
+    "https://danbooru.donmai.us/posts/3314284"
   ]
 )
-
+extra_images = {
+  "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
+  "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
+}
+indent_spaces = 18
+indent = ' ' * indent_spaces
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference High Res</title>
@@ -147,8 +172,8 @@ for url in urls:
         print(f'Creating post of {post_id}')
 
         extra_image = ''
-        if url == "https://danbooru.donmai.us/posts/9343884":
-          extra_image = '\n' + ' ' * 18 + '<img src="https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg"/>'
+        if url in extra_images:
+          extra_image = f'\n{indent}<img src="{extra_images[url]}"/>'
 
         feed += f'''
           <entry>
