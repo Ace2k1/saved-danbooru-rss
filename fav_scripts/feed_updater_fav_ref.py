@@ -103,8 +103,10 @@ def create_entry_element(post_id, url, data):
 
     content_el = ET.SubElement(entry, "content", type="xhtml")
     div = ET.SubElement(content_el, "div", xmlns=NS_XHTML)
-    a = ET.SubElement(div, "a", href=url)
+    a = ET.SubElement(div, "a", href=thumb_url)
     ET.SubElement(a, "img", src=thumb_url)
+    ET.SubElement(div, "a", href=url).text = "Source"
+
 
     author_el = ET.SubElement(entry, "author")
     name_el = ET.SubElement(author_el, "name")

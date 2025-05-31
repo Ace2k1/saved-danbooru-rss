@@ -189,9 +189,10 @@ for url in urls:
             <updated>{updated}</updated>
             <content type="xhtml">
               <div xmlns="http://www.w3.org/1999/xhtml">
-                <a href="{url}">
+                <a href="{thumb_url}">
                   <img src="{thumb_url}"/>{extra_image}
                 </a>
+                <a href="{url}">Source</a>
               </div>
             </content>
             <author>
