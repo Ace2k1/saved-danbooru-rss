@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import requests
 from datetime import datetime, timezone
 from html import escape
+from xml.dom import minidom
 import os
 
 NS_ATOM = "http://www.w3.org/2005/Atom"
@@ -45,19 +46,45 @@ def entry_exists(root, post_id):
         if id_elem is not None and id_elem.text.endswith(post_id):
             return True
     return False
+def indent_element(elem, level=0, indent_per_level=2, base_indent=10):
+    """Recursively indent an ElementTree element for pretty-printing."""
+    i = '\n' + ' ' * (base_indent + indent_per_level * level)
+    j = '\n' + ' ' * (base_indent + indent_per_level * (level + 1))
+
+    # Skip indenting <content> inner XHTML
+    if elem.tag.endswith('content'):
+        if len(elem):  # has children
+            for e in elem:
+                indent_element(e, level + 1, indent_per_level, base_indent)
+            elem.text = j
+            elem[-1].tail = i
+        elem.tail = '\n' + ' ' * (base_indent + indent_per_level * level)
+        return
+
+    if len(elem):
+        if elem.text is None or not elem.text.strip():
+            elem.text = j
+        for e in elem:
+            indent_element(e, level + 1, indent_per_level, base_indent)
+        elem[-1].tail = i
+    else:
+        # Don't overwrite text content of leaf nodes
+        if elem.text is not None:
+            elem.text = elem.text.strip()
+    elem.tail = i
 
 def create_entry_element(post_id, url, data):
     md5 = data["md5"]
     ext = data["file_ext"]
     compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
     thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.{ext}"
-    # Validate thumb_url exists, else fallback to jpg
+    img_url = f"https://cdn.donmai.us/{compiledMD5}.{ext}"
+
     try:
         resp = requests.head(thumb_url)
         if resp.status_code != 200 and ext != "jpg":
             thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.jpg"
     except:
-        # On any error, keep thumb_url as is
         pass
 
     full_url = data.get("large_file_url") or data.get("file_url") or ""
@@ -76,42 +103,48 @@ def create_entry_element(post_id, url, data):
         title += f" - ID {post_id}"
 
     created_at = data.get("created_at", "2025-01-01T00:00:00Z")
-    # Format updated to preserve timezone if present
-    # updated = created_at
     try:
-        # Handle timezone-aware or naive datetime
         dt = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
         updated = dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     except Exception:
         updated = "2025-01-01T00:00:00Z"
 
-    # Build entry element
+    # Build the new entry
     entry = ET.Element(f"{{{NS_ATOM}}}entry")
-
-    title_el = ET.SubElement(entry, "title")
-    title_el.text = escape(title)
-
+    ET.SubElement(entry, "title").text = escape(title)
     ET.SubElement(entry, "link", href=url, rel="alternate")
     ET.SubElement(entry, "link", href=related_url, rel="related")
     ET.SubElement(entry, "link", href=thumb_url, rel="preview")
-
-    id_el = ET.SubElement(entry, "id")
-    id_el.text = url
-
-    updated_el = ET.SubElement(entry, "updated")
-    updated_el.text = updated
+    ET.SubElement(entry, "id").text = url
+    ET.SubElement(entry, "updated").text = updated
 
     content_el = ET.SubElement(entry, "content", type="xhtml")
     div = ET.SubElement(content_el, "div", xmlns=NS_XHTML)
-    a = ET.SubElement(div, "a", href=thumb_url)
+    a = ET.SubElement(div, "a", href=img_url)
     ET.SubElement(a, "img", src=thumb_url)
-    ET.SubElement(div, "a", href=url).text = "Source"
-
 
     author_el = ET.SubElement(entry, "author")
-    name_el = ET.SubElement(author_el, "name")
-    name_el.text = "Ace2k1"
+    ET.SubElement(author_el, "name").text = "Ace2k1"
 
+    # rough_string = ET.tostring(entry, encoding="utf-8")
+    # parsed = minidom.parseString(rough_string)
+    # for content in parsed.getElementsByTagName("content"):
+    #     if content.firstChild and content.firstChild.nodeType == content.ELEMENT_NODE:
+    #         div = content.firstChild
+    #         if div.tagName == "div":
+    #             a = div.getElementsByTagName("a")[0]
+    #             img = a.getElementsByTagName("img")[0]
+
+    #             # Add line breaks between elements
+    #             div.insertBefore(parsed.createTextNode("      "), a)
+    #             a.insertBefore(parsed.createTextNode("        "), img)
+    #             a.appendChild(parsed.createTextNode("      "))
+    #             div.appendChild(parsed.createTextNode("    "))
+    #             content.appendChild(parsed.createTextNode("  "))
+
+    # pretty_string = parsed.toprettyxml(indent="  ", encoding="utf-8")
+
+    
     return entry
 
 def normalize_entries_content(root):
@@ -139,6 +172,8 @@ def normalize_entries_content(root):
                 a = ET.SubElement(div, "a", href=alternate_link)
                 ET.SubElement(a, "img", src=preview_link)
             # else leave empty div if missing
+            # Now indent the rebuilt content subtree (important!)
+            indent_element(content, level=2, indent_per_level=2, base_indent=10)
 
 def append_danbooru_entry(feed_path, post_url):
     tree = load_feed(feed_path)
@@ -160,24 +195,19 @@ def append_danbooru_entry(feed_path, post_url):
         return
 
     new_entry = create_entry_element(post_id_from_url, post_url, data)
-
-    # # Assert the ID inside new_entry matches post_id_from_url
-    # post_id_from_entry = str(get_entry_post_id(new_entry))
-    # assert post_id_from_entry == post_id_from_url, f"Post ID mismatch: entry {post_id_from_entry} vs url {post_id_from_url}"
+    print(new_entry)
+    indent_element(new_entry, level=0, indent_per_level=2, base_indent=10)
+    new_entry.tail = '\n\n' + ' ' * 10
 
     root.append(new_entry)
-
     # Sort entries by post ID descending (integer)
     entries = list(root.findall(f"{{{NS_ATOM}}}entry"))
-
     def sort_key(e):
-        # For the newly appended entry, fallback to post_id_from_url
         if e is new_entry:
             return get_entry_post_id(e, default_post_id=int(post_id_from_url))
         else:
             return get_entry_post_id(e, default_post_id=0)
     entries_sorted = sorted(entries, key=sort_key, reverse=True)
-
     # Clear old entries and re-append in order
     for e in root.findall(f"{{{NS_ATOM}}}entry"):
         root.remove(e)
@@ -193,7 +223,14 @@ def append_danbooru_entry(feed_path, post_url):
     # Normalize all entries' content for consistent format
     normalize_entries_content(root)
 
+    # Indent the whole feed root again to fix indentation after normalization
+    indent_element(root, level=0, indent_per_level=2, base_indent=0)
+
+
     tree.write(feed_path, encoding="utf-8", xml_declaration=True)
+    # pretty_xml = minidom.parseString(ET.tostring(tree.getroot(), encoding="utf-8"))
+    # with open(feed_path, "wb") as f:
+    #     f.write(pretty_xml.toprettyxml(indent="  ", encoding="utf-8"))
     print(f"Appended post {post_id_from_url} and saved feed to {feed_path}")
 
 
@@ -212,5 +249,5 @@ if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
 
     # You can replace this with reading from a .txt file or another source
-    post_urls = []
+    post_urls = ["https://danbooru.donmai.us/posts/9395699", "https://danbooru.donmai.us/posts/9376251", "https://danbooru.donmai.us/posts/9380596", "https://danbooru.donmai.us/posts/9386234"]
     append_multiple_entries(feed_file, post_urls)

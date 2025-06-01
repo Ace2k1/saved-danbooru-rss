@@ -128,7 +128,11 @@ extra_images = {
   "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/360x360/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
   "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/360x360/44/de/44de7554b8287cad2630646996125b95.jpg",
 }
-indent_spaces = 18
+extra_images_fullres = {
+  "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
+  "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
+}
+indent_spaces = 16
 indent = ' ' * indent_spaces
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -150,16 +154,18 @@ for url in urls:
         md5 = data["md5"]
         ext = data["file_ext"]
         compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
-        thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.{ext}"
+        cdnString = "https://cdn.donmai.us"
+        thumb_url = f"{cdnString}/360x360/{compiledMD5}.{ext}"
         thumb_response = requests.head(thumb_url)
         if thumb_response.status_code != 200 and ext != "jpg":
-            # Try fallback to jpg
-            thumb_ext = "jpg"
-            thumb_url = f"https://cdn.donmai.us/360x360/{compiledMD5}.{thumb_ext}"
+          # Try fallback to jpg
+          thumb_ext = "jpg"
+          thumb_url = f"{cdnString}/360x360/{compiledMD5}.{thumb_ext}"
+        img_url = f"{cdnString}/{compiledMD5}.{ext}"
         # Full image
         full_url = data.get("large_file_url") or data.get("file_url")
         if full_url and full_url.startswith("/"):
-            full_url = "https://danbooru.donmai.us" + full_url
+          full_url = "https://danbooru.donmai.us" + full_url
 
         related_url = data.get("source") if data.get("source", "").startswith("https://i.pximg.net") else full_url
 
@@ -178,8 +184,8 @@ for url in urls:
 
         extra_image = ''
         if url in extra_images:
-          extra_image = f'\n{indent}<img src="{extra_images[url]}"/>'
-
+          indent2 = ' ' * (indent_spaces+2)
+          extra_image = f'\n{indent}<a href="{extra_images_fullres[url]}">\n{indent2}<img src="{extra_images[url]}"/>\n{indent}</a>'
         feed += f'''
           <entry>
             <title>{escape(title)}</title>
@@ -190,10 +196,9 @@ for url in urls:
             <updated>{updated}</updated>
             <content type="xhtml">
               <div xmlns="http://www.w3.org/1999/xhtml">
-                <a href="{thumb_url}">
-                  <img src="{thumb_url}"/>{extra_image}
-                </a>
-                <a href="{url}">Source</a>
+                <a href="{img_url}">
+                  <img src="{thumb_url}"/>
+                </a>{extra_image}
               </div>
             </content>
             <author>
