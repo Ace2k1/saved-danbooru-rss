@@ -2,7 +2,6 @@ import xml.etree.ElementTree as ET
 import requests
 from datetime import datetime, timezone
 from html import escape
-from xml.dom import minidom
 import os
 
 NS_ATOM = "http://www.w3.org/2005/Atom"
@@ -125,26 +124,6 @@ def create_entry_element(post_id, url, data):
 
     author_el = ET.SubElement(entry, "author")
     ET.SubElement(author_el, "name").text = "Ace2k1"
-
-    # rough_string = ET.tostring(entry, encoding="utf-8")
-    # parsed = minidom.parseString(rough_string)
-    # for content in parsed.getElementsByTagName("content"):
-    #     if content.firstChild and content.firstChild.nodeType == content.ELEMENT_NODE:
-    #         div = content.firstChild
-    #         if div.tagName == "div":
-    #             a = div.getElementsByTagName("a")[0]
-    #             img = a.getElementsByTagName("img")[0]
-
-    #             # Add line breaks between elements
-    #             div.insertBefore(parsed.createTextNode("      "), a)
-    #             a.insertBefore(parsed.createTextNode("        "), img)
-    #             a.appendChild(parsed.createTextNode("      "))
-    #             div.appendChild(parsed.createTextNode("    "))
-    #             content.appendChild(parsed.createTextNode("  "))
-
-    # pretty_string = parsed.toprettyxml(indent="  ", encoding="utf-8")
-
-    
     return entry
 
 def normalize_entries_content(root):
@@ -195,10 +174,8 @@ def append_danbooru_entry(feed_path, post_url):
         return
 
     new_entry = create_entry_element(post_id_from_url, post_url, data)
-    print(new_entry)
     indent_element(new_entry, level=0, indent_per_level=2, base_indent=10)
     new_entry.tail = '\n\n' + ' ' * 10
-
     root.append(new_entry)
     # Sort entries by post ID descending (integer)
     entries = list(root.findall(f"{{{NS_ATOM}}}entry"))
@@ -222,15 +199,8 @@ def append_danbooru_entry(feed_path, post_url):
 
     # Normalize all entries' content for consistent format
     normalize_entries_content(root)
-
-    # Indent the whole feed root again to fix indentation after normalization
     indent_element(root, level=0, indent_per_level=2, base_indent=0)
-
-
     tree.write(feed_path, encoding="utf-8", xml_declaration=True)
-    # pretty_xml = minidom.parseString(ET.tostring(tree.getroot(), encoding="utf-8"))
-    # with open(feed_path, "wb") as f:
-    #     f.write(pretty_xml.toprettyxml(indent="  ", encoding="utf-8"))
     print(f"Appended post {post_id_from_url} and saved feed to {feed_path}")
 
 
@@ -249,5 +219,5 @@ if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
 
     # You can replace this with reading from a .txt file or another source
-    post_urls = ["https://danbooru.donmai.us/posts/9395699", "https://danbooru.donmai.us/posts/9376251", "https://danbooru.donmai.us/posts/9380596", "https://danbooru.donmai.us/posts/9386234"]
+    post_urls = []
     append_multiple_entries(feed_file, post_urls)

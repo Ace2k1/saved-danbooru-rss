@@ -3,6 +3,10 @@ from datetime import datetime, timezone
 from html import escape
 urls = list(
   [
+    "https://danbooru.donmai.us/posts/9395699",
+    "https://danbooru.donmai.us/posts/9386232",
+    "https://danbooru.donmai.us/posts/9380596",
+    "https://danbooru.donmai.us/posts/9376251",
     "https://danbooru.donmai.us/posts/9364776",
     "https://danbooru.donmai.us/posts/9364774",
     "https://danbooru.donmai.us/posts/9350277",
@@ -123,16 +127,29 @@ urls = list(
     "https://danbooru.donmai.us/posts/3314284"
   ]
 )
-
-extra_images = {
-  "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/360x360/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
-  "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/360x360/44/de/44de7554b8287cad2630646996125b95.jpg",
+# extra_images = {
+#   "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/360x360/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
+#   "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/360x360/44/de/44de7554b8287cad2630646996125b95.jpg",
+# }
+# extra_images_fullres = {
+#   "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
+#   "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
+# }
+image_info = {
+  "https://danbooru.donmai.us/posts/9386232":("7fc37fc35a56d0cca8b957616fad43e9afa6","jpg"),
+  "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
+  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg")
 }
-extra_images_fullres = {
-  "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
-  "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
-}
-indent_spaces = 16
+def get_custom_image_urls(post_url):
+  """Return custom (thumb_url, full_url) if post is in overrides."""
+  if post_url in image_info:
+      md5, ext = image_info[post_url]
+      subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+      thumb_url = f"https://cdn.donmai.us/360x360/{subpath}.{ext}"
+      full_url = f"https://cdn.donmai.us/{subpath}.{ext}"
+      return thumb_url, full_url
+  return None, None
+indent_spaces = 8
 indent = ' ' * indent_spaces
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -150,7 +167,6 @@ for url in urls:
         r = requests.get(api_url)
         r.raise_for_status()
         data = r.json()
-
         md5 = data["md5"]
         ext = data["file_ext"]
         compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
@@ -183,32 +199,35 @@ for url in urls:
         print(f'Creating post of {post_id}')
 
         extra_image = ''
-        if url in extra_images:
+        custom_thumb, custom_full = get_custom_image_urls(url)
+        if custom_thumb and custom_full:
+          extra_thumb_url = custom_thumb
+          extra_img_url = custom_full
           indent2 = ' ' * (indent_spaces+2)
-          extra_image = f'\n{indent}<a href="{extra_images_fullres[url]}">\n{indent2}<img src="{extra_images[url]}"/>\n{indent}</a>'
+          extra_image = f'\n{indent}<a href="{extra_img_url}">\n{indent2}<img src="{extra_thumb_url}"/>\n{indent}</a>'
         feed += f'''
-          <entry>
-            <title>{escape(title)}</title>
-            <link href="{url}" rel="alternate"/>
-            <link href="{related_url}" rel="related"/>
-            <link href="{thumb_url}" rel="preview"/>
-            <id>{url}</id>
-            <updated>{updated}</updated>
-            <content type="xhtml">
-              <div xmlns="http://www.w3.org/1999/xhtml">
-                <a href="{img_url}">
-                  <img src="{thumb_url}"/>
-                </a>{extra_image}
-              </div>
-            </content>
-            <author>
-              <name>Ace2k1</name>
-            </author>
-          </entry>
-        '''
+  <entry>
+    <title>{escape(title)}</title>
+    <link href="{url}" rel="alternate"/>
+    <link href="{related_url}" rel="related"/>
+    <link href="{thumb_url}" rel="preview"/>
+    <id>{url}</id>
+    <updated>{updated}</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="{img_url}">
+          <img src="{thumb_url}"/>
+        </a>{extra_image}
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+'''
     except Exception as e:
         print(f"Error on post {post_id}: {e}")
 feed += "</feed>"
 with open("danbooru_ref_fav.xml", "w", encoding="utf-8") as f:
-    f.write(feed)
+  f.write(feed)
 print("RSS feed written to danbooru_ref_fav.xml")
