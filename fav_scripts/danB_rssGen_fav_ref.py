@@ -136,7 +136,7 @@ urls = list(
 #   "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
 # }
 image_info = {
-  "https://danbooru.donmai.us/posts/9386232":("7fc37fc35a56d0cca8b957616fad43e9afa6","jpg"),
+  "https://danbooru.donmai.us/posts/9386232":("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
   "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
   "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg")
 }
