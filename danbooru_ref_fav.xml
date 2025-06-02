@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us"/>
-  <updated>2025-06-02T10:02:49.998825Z</updated>
+  <updated>2025-06-02T12:02:49.998825Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
 
   <entry>
@@ -37,7 +37,7 @@
           <img src="https://cdn.donmai.us/360x360/6c/ca/6cca8460cacbaa6e2e04b9b57b13f24b.jpg"/>
         </a>
         <a href="https://cdn.donmai.us/7f/c3/7fc37fc35a56d0cca8b957616fad43e9afa6.jpg">
-          <img src="https://cdn.donmai.us/360x360/7f/c3/7fc37fc35a56d0cca8b957616fad43e9afa6.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/7f/c3/7fc35a56d0cca8b957616fad43e9afa6.jpg"/>
         </a>
       </div>
     </content>
