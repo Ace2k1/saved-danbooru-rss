@@ -29,10 +29,15 @@ def get_custom_image_urls(post_url):
     return []
   image_entries = entry if isinstance(entry, list) else [entry]
   result = []
+  cdnString = "https://cdn.donmai.us"
   for md5, ext in image_entries:
-    subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
-    thumb_url = f"https://cdn.donmai.us/360x360/{subpath}.{ext}"
-    full_url = f"https://cdn.donmai.us/{subpath}.{ext}"
+    compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+    thumb_url = f"{cdnString}/360x360/{compiledMD5}.{ext}"
+    full_url = f"{cdnString}/{compiledMD5}.{ext}"
+    thumb_response = requests.head(thumb_url)
+    if thumb_response.status_code != 200 and ext != "jpg":
+        thumb_ext = "jpg"
+        thumb_url = f"{cdnString}/360x360/{compiledMD5}.{thumb_ext}"
     result.append((thumb_url, full_url))
   return result
 

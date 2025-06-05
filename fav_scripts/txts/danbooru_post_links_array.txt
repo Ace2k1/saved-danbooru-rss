@@ -1,4 +1,6 @@
 [
+    "https://danbooru.donmai.us/posts/9416965",
+    "https://danbooru.donmai.us/posts/9402123",
     "https://danbooru.donmai.us/posts/9395699",
     "https://danbooru.donmai.us/posts/9386232",
     "https://danbooru.donmai.us/posts/9380596",
