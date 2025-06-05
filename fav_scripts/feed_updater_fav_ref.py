@@ -13,19 +13,28 @@ FEED_TITLE = "Ace's Danbooru Feed"
 FEED_LINK = "https://danbooru.donmai.us"
 
 image_info = {
-  "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6", "jpg"),
+  "https://danbooru.donmai.us/posts/9416965":[("9498ac2f52b24df4b52260a1e9bc6ec1","png"),("d91087f546ea4d402a3ec49f47e41f64","jpg")],
+  "https://danbooru.donmai.us/posts/9402123":[("c77c28c2731d77637573604c2344048d","jpg"),("d5f004a6e39b6f54fa1660a7432890f0","png")],
+  "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
   "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
-  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg")
+  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
 }
-
 def get_custom_image_urls(post_url):
-    if post_url in image_info:
-        md5, ext = image_info[post_url]
-        subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
-        thumb_url = f"https://cdn.donmai.us/360x360/{subpath}.{ext}"
-        full_url = f"https://cdn.donmai.us/{subpath}.{ext}"
-        return thumb_url, full_url
-    return None, None
+  """
+  Return custom (thumb_url, full_url) tuples for a given post.
+  Supports both single (md5, ext) and multiple [(md5, ext), ...] entries.
+  """
+  entry = image_info.get(post_url)
+  if not entry:
+    return []
+  image_entries = entry if isinstance(entry, list) else [entry]
+  result = []
+  for md5, ext in image_entries:
+    subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+    thumb_url = f"https://cdn.donmai.us/360x360/{subpath}.{ext}"
+    full_url = f"https://cdn.donmai.us/{subpath}.{ext}"
+    result.append((thumb_url, full_url))
+  return result
 
 def get_entry_post_id(entry, default_post_id=0):
     id_elem = entry.find(f"{{{NS_ATOM}}}id")
@@ -138,11 +147,12 @@ def create_entry_element(post_id, url, data):
     div.set("xmlns", NS_XHTML)
     a = ET.SubElement(div, "a", href=img_url)
     ET.SubElement(a, "img", src=thumb_url)
-
-    custom_thumb, custom_full = get_custom_image_urls(url)
-    if custom_thumb and custom_full:
-        extra_a = ET.SubElement(div, "a", href=custom_full)
-        ET.SubElement(extra_a, "img", src=custom_thumb)
+    custom_images = get_custom_image_urls(url)
+    if custom_images:
+        for custom_thumb, custom_full in custom_images:
+            if custom_thumb and custom_full:
+                a_tag = ET.SubElement(div, "a", href=custom_full)
+                ET.SubElement(a_tag, "img", src=custom_thumb)
 
     author_el = ET.SubElement(entry, "author")
     ET.SubElement(author_el, "name").text = "Ace2k1"
@@ -203,5 +213,5 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
-    post_urls = ["https://danbooru.donmai.us/posts/9386232"]
+    post_urls = ["https://danbooru.donmai.us/posts/9402123", "https://danbooru.donmai.us/posts/9416965"]
     append_multiple_entries(feed_file, post_urls)

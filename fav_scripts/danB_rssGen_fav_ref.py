@@ -127,28 +127,30 @@ urls = list(
     "https://danbooru.donmai.us/posts/3314284"
   ]
 )
-# extra_images = {
-#   "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/360x360/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
-#   "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/360x360/44/de/44de7554b8287cad2630646996125b95.jpg",
-# }
-# extra_images_fullres = {
-#   "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
-#   "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
-# }
 image_info = {
-  "https://danbooru.donmai.us/posts/9386232":("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
+  "https://danbooru.donmai.us/posts/9416965":[("9498ac2f52b24df4b52260a1e9bc6ec1","png"),("d91087f546ea4d402a3ec49f47e41f64","jpg")],
+  "https://danbooru.donmai.us/posts/9402123":[("c77c28c2731d77637573604c2344048d","jpg"),("d5f004a6e39b6f54fa1660a7432890f0","png")],
+  "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
   "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
-  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg")
+  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
 }
 def get_custom_image_urls(post_url):
-  """Return custom (thumb_url, full_url) if post is in overrides."""
-  if post_url in image_info:
-      md5, ext = image_info[post_url]
-      subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
-      thumb_url = f"https://cdn.donmai.us/360x360/{subpath}.{ext}"
-      full_url = f"https://cdn.donmai.us/{subpath}.{ext}"
-      return thumb_url, full_url
-  return None, None
+  """
+  Return custom (thumb_url, full_url) tuples for a given post.
+  Supports both single (md5, ext) and multiple [(md5, ext), ...] entries.
+  """
+  entry = image_info.get(post_url)
+  if not entry:
+    return []
+  image_entries = entry if isinstance(entry, list) else [entry]
+  result = []
+  for md5, ext in image_entries:
+    subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+    thumb_url = f"https://cdn.donmai.us/360x360/{subpath}.{ext}"
+    full_url = f"https://cdn.donmai.us/{subpath}.{ext}"
+    result.append((thumb_url, full_url))
+  return result
+
 indent_spaces = 8
 indent = ' ' * indent_spaces
 feed = '''<?xml version="1.0" encoding="utf-8"?>
@@ -199,12 +201,14 @@ for url in urls:
         print(f'Creating post of {post_id}')
 
         extra_image = ''
-        custom_thumb, custom_full = get_custom_image_urls(url)
-        if custom_thumb and custom_full:
-          extra_thumb_url = custom_thumb
-          extra_img_url = custom_full
-          indent2 = ' ' * (indent_spaces+2)
-          extra_image = f'\n{indent}<a href="{extra_img_url}">\n{indent2}<img src="{extra_thumb_url}"/>\n{indent}</a>'
+        custom_images = get_custom_image_urls(url)
+        if custom_images:
+            indent2 = ' ' * (indent_spaces + 2)
+            image_tags = [
+              f'{indent}<a href="{full}">\n{indent2}<img src="{thumb}"/>\n{indent}</a>'
+              for thumb, full in custom_images
+            ]
+            extra_image = '\n' + '\n'.join(image_tags)
         feed += f'''
   <entry>
     <title>{escape(title)}</title>
