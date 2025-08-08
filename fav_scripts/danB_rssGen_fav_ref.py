@@ -2,137 +2,38 @@ import requests
 from datetime import datetime, timezone
 from html import escape
 urls = list(
-  [
-    "https://danbooru.donmai.us/posts/9364776",
-    "https://danbooru.donmai.us/posts/9364774",
-    "https://danbooru.donmai.us/posts/9350277",
-    "https://danbooru.donmai.us/posts/9344166",
-    "https://danbooru.donmai.us/posts/9343929",
-    "https://danbooru.donmai.us/posts/9343884",
-    "https://danbooru.donmai.us/posts/9342582",
-    "https://danbooru.donmai.us/posts/9335603",
-    "https://danbooru.donmai.us/posts/9315003",
-    "https://danbooru.donmai.us/posts/9309263",
-    "https://danbooru.donmai.us/posts/9281207",
-    "https://danbooru.donmai.us/posts/9271280",
-    "https://danbooru.donmai.us/posts/9259171",
-    "https://danbooru.donmai.us/posts/9255073",
-    "https://danbooru.donmai.us/posts/9249317",
-    "https://danbooru.donmai.us/posts/9223184",
-    "https://danbooru.donmai.us/posts/9183678",
-    "https://danbooru.donmai.us/posts/9183661",
-    "https://danbooru.donmai.us/posts/9182468",
-    "https://danbooru.donmai.us/posts/9179953",
-    "https://danbooru.donmai.us/posts/9169844",
-    "https://danbooru.donmai.us/posts/9146168",
-    "https://danbooru.donmai.us/posts/9139250",
-    "https://danbooru.donmai.us/posts/9095537",
-    "https://danbooru.donmai.us/posts/9078272",
-    "https://danbooru.donmai.us/posts/9058666",
-    "https://danbooru.donmai.us/posts/9005362",
-    "https://danbooru.donmai.us/posts/8974672",
-    "https://danbooru.donmai.us/posts/8895250",
-    "https://danbooru.donmai.us/posts/8862059",
-    "https://danbooru.donmai.us/posts/8841982",
-    "https://danbooru.donmai.us/posts/8810032",
-    "https://danbooru.donmai.us/posts/8733499",
-    "https://danbooru.donmai.us/posts/8695013",
-    "https://danbooru.donmai.us/posts/8647146",
-    "https://danbooru.donmai.us/posts/8614576",
-    "https://danbooru.donmai.us/posts/8566867",
-    "https://danbooru.donmai.us/posts/8507085",
-    "https://danbooru.donmai.us/posts/8503532",
-    "https://danbooru.donmai.us/posts/8501737",
-    "https://danbooru.donmai.us/posts/8500372",
-    "https://danbooru.donmai.us/posts/8477800",
-    "https://danbooru.donmai.us/posts/8471801",
-    "https://danbooru.donmai.us/posts/8320180",
-    "https://danbooru.donmai.us/posts/8225477",
-    "https://danbooru.donmai.us/posts/8114443",
-    "https://danbooru.donmai.us/posts/8044616",
-    "https://danbooru.donmai.us/posts/8017980",
-    "https://danbooru.donmai.us/posts/8003928",
-    "https://danbooru.donmai.us/posts/7982459",
-    "https://danbooru.donmai.us/posts/7966454",
-    "https://danbooru.donmai.us/posts/7945409",
-    "https://danbooru.donmai.us/posts/7930867",
-    "https://danbooru.donmai.us/posts/7899191",
-    "https://danbooru.donmai.us/posts/7865853",
-    "https://danbooru.donmai.us/posts/7682905",
-    "https://danbooru.donmai.us/posts/7670183",
-    "https://danbooru.donmai.us/posts/7610336",
-    "https://danbooru.donmai.us/posts/7553328",
-    "https://danbooru.donmai.us/posts/7370071",
-    "https://danbooru.donmai.us/posts/7370022",
-    "https://danbooru.donmai.us/posts/7290005",
-    "https://danbooru.donmai.us/posts/7260871",
-    "https://danbooru.donmai.us/posts/7161239",
-    "https://danbooru.donmai.us/posts/7157242",
-    "https://danbooru.donmai.us/posts/7134112",
-    "https://danbooru.donmai.us/posts/7129231",
-    "https://danbooru.donmai.us/posts/7110185",
-    "https://danbooru.donmai.us/posts/6993529",
-    "https://danbooru.donmai.us/posts/6986700",
-    "https://danbooru.donmai.us/posts/6945945",
-    "https://danbooru.donmai.us/posts/6880331",
-    "https://danbooru.donmai.us/posts/6787393",
-    "https://danbooru.donmai.us/posts/6746224",
-    "https://danbooru.donmai.us/posts/6741019",
-    "https://danbooru.donmai.us/posts/6731119",
-    "https://danbooru.donmai.us/posts/6695180",
-    "https://danbooru.donmai.us/posts/6624998",
-    "https://danbooru.donmai.us/posts/6620370",
-    "https://danbooru.donmai.us/posts/6611132",
-    "https://danbooru.donmai.us/posts/6566350",
-    "https://danbooru.donmai.us/posts/6557284",
-    "https://danbooru.donmai.us/posts/6314939",
-    "https://danbooru.donmai.us/posts/6307201",
-    "https://danbooru.donmai.us/posts/6021128",
-    "https://danbooru.donmai.us/posts/6011055",
-    "https://danbooru.donmai.us/posts/5984560",
-    "https://danbooru.donmai.us/posts/5984215",
-    "https://danbooru.donmai.us/posts/5950799",
-    "https://danbooru.donmai.us/posts/5869785",
-    "https://danbooru.donmai.us/posts/5834380",
-    "https://danbooru.donmai.us/posts/5786630",
-    "https://danbooru.donmai.us/posts/5786575",
-    "https://danbooru.donmai.us/posts/5775434",
-    "https://danbooru.donmai.us/posts/5748467",
-    "https://danbooru.donmai.us/posts/5698872",
-    "https://danbooru.donmai.us/posts/5609393",
-    "https://danbooru.donmai.us/posts/5533131",
-    "https://danbooru.donmai.us/posts/5510065",
-    "https://danbooru.donmai.us/posts/5371927",
-    "https://danbooru.donmai.us/posts/5350149",
-    "https://danbooru.donmai.us/posts/5312834",
-    "https://danbooru.donmai.us/posts/5261001",
-    "https://danbooru.donmai.us/posts/5251873",
-    "https://danbooru.donmai.us/posts/5158945",
-    "https://danbooru.donmai.us/posts/5089699",
-    "https://danbooru.donmai.us/posts/5048288",
-    "https://danbooru.donmai.us/posts/5006429",
-    "https://danbooru.donmai.us/posts/4705657",
-    "https://danbooru.donmai.us/posts/4681891",
-    "https://danbooru.donmai.us/posts/4624471",
-    "https://danbooru.donmai.us/posts/4565933",
-    "https://danbooru.donmai.us/posts/4520870",
-    "https://danbooru.donmai.us/posts/4489953",
-    "https://danbooru.donmai.us/posts/4133712",
-    "https://danbooru.donmai.us/posts/3375628",
-    "https://danbooru.donmai.us/posts/3346440",
-    "https://danbooru.donmai.us/posts/3314284"
-  ]
+  []
 )
+image_info = {
+  "https://danbooru.donmai.us/posts/9416965":[("9498ac2f52b24df4b52260a1e9bc6ec1","png"),("d91087f546ea4d402a3ec49f47e41f64","jpg")],
+  "https://danbooru.donmai.us/posts/9402123":[("c77c28c2731d77637573604c2344048d","jpg"),("d5f004a6e39b6f54fa1660a7432890f0","png")],
+  "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
+  "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
+  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
+}
+def get_custom_image_urls(post_url):
+  """
+  Return custom (thumb_url, full_url) tuples for a given post.
+  Supports both single (md5, ext) and multiple [(md5, ext), ...] entries.
+  """
+  entry = image_info.get(post_url)
+  if not entry:
+    return []
+  image_entries = entry if isinstance(entry, list) else [entry]
+  result = []
+  cdnString = "https://cdn.donmai.us"
+  for md5, ext in image_entries:
+    subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+    thumb_url = f"{cdnString}/360x360/{subpath}.jpg"
+    full_url = f"{cdnString}/{subpath}.{ext}"
+    thumb_response = requests.head(thumb_url)
+    if thumb_response.status_code != 200 and ext != "jpg":
+      thumb_ext = "jpg"
+      thumb_url = f"{cdnString}/360x360/{compiledMD5}.{thumb_ext}"
+    result.append((thumb_url, full_url))
+  return result
 
-extra_images = {
-  "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/360x360/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
-  "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/360x360/44/de/44de7554b8287cad2630646996125b95.jpg",
-}
-extra_images_fullres = {
-  "https://danbooru.donmai.us/posts/9343884": "https://cdn.donmai.us/5d/48/5d48620689d4dc5a40ef5ab44a5c6ea2.jpg",
-  "https://danbooru.donmai.us/posts/4624471": "https://cdn.donmai.us/44/de/44de7554b8287cad2630646996125b95.jpg",
-}
-indent_spaces = 16
+indent_spaces = 8
 indent = ' ' * indent_spaces
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -150,7 +51,6 @@ for url in urls:
         r = requests.get(api_url)
         r.raise_for_status()
         data = r.json()
-
         md5 = data["md5"]
         ext = data["file_ext"]
         compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
@@ -183,32 +83,37 @@ for url in urls:
         print(f'Creating post of {post_id}')
 
         extra_image = ''
-        if url in extra_images:
-          indent2 = ' ' * (indent_spaces+2)
-          extra_image = f'\n{indent}<a href="{extra_images_fullres[url]}">\n{indent2}<img src="{extra_images[url]}"/>\n{indent}</a>'
+        custom_images = get_custom_image_urls(url)
+        if custom_images:
+            indent2 = ' ' * (indent_spaces + 2)
+            image_tags = [
+              f'{indent}<a href="{full}">\n{indent2}<img src="{thumb}"/>\n{indent}</a>'
+              for thumb, full in custom_images
+            ]
+            extra_image = '\n' + '\n'.join(image_tags)
         feed += f'''
-          <entry>
-            <title>{escape(title)}</title>
-            <link href="{url}" rel="alternate"/>
-            <link href="{related_url}" rel="related"/>
-            <link href="{thumb_url}" rel="preview"/>
-            <id>{url}</id>
-            <updated>{updated}</updated>
-            <content type="xhtml">
-              <div xmlns="http://www.w3.org/1999/xhtml">
-                <a href="{img_url}">
-                  <img src="{thumb_url}"/>
-                </a>{extra_image}
-              </div>
-            </content>
-            <author>
-              <name>Ace2k1</name>
-            </author>
-          </entry>
-        '''
+  <entry>
+    <title>{escape(title)}</title>
+    <link href="{url}" rel="alternate"/>
+    <link href="{related_url}" rel="related"/>
+    <link href="{thumb_url}" rel="preview"/>
+    <id>{url}</id>
+    <updated>{updated}</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="{img_url}">
+          <img src="{thumb_url}"/>
+        </a>{extra_image}
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+'''
     except Exception as e:
         print(f"Error on post {post_id}: {e}")
 feed += "</feed>"
 with open("danbooru_ref_fav.xml", "w", encoding="utf-8") as f:
-    f.write(feed)
+  f.write(feed)
 print("RSS feed written to danbooru_ref_fav.xml")
