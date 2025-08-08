@@ -2,45 +2,16 @@ import xml.etree.ElementTree as ET
 import requests
 from datetime import datetime, timezone
 from html import escape
+from xml.dom import minidom
 import os
 
 NS_ATOM = "http://www.w3.org/2005/Atom"
 NS_XHTML = "http://www.w3.org/1999/xhtml"
 ET.register_namespace('', NS_ATOM)
-# ET.register_namespace('xhtml', NS_XHTML)
+
 FEED_ID = "tag:danbooru.donmai.us,2025:/feed"
 FEED_TITLE = "Ace's Danbooru Feed"
 FEED_LINK = "https://danbooru.donmai.us"
-
-image_info = {
-  "https://danbooru.donmai.us/posts/9416965":[("9498ac2f52b24df4b52260a1e9bc6ec1","png"),("d91087f546ea4d402a3ec49f47e41f64","jpg")],
-  "https://danbooru.donmai.us/posts/9402123":[("c77c28c2731d77637573604c2344048d","jpg"),("d5f004a6e39b6f54fa1660a7432890f0","png")],
-  "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
-  "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
-  "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
-}
-def get_custom_image_urls(post_url):
-  """
-  Return custom (thumb_url, full_url) tuples for a given post.
-  Supports both single (md5, ext) and multiple [(md5, ext), ...] entries.
-  """
-  entry = image_info.get(post_url)
-  if not entry:
-    return []
-  image_entries = entry if isinstance(entry, list) else [entry]
-  result = []
-  cdnString = "https://cdn.donmai.us"
-  for md5, ext in image_entries:
-    compiledMD5 = f"{md5[0:2]}/{md5[2:4]}/{md5}"
-    thumb_url = f"{cdnString}/360x360/{compiledMD5}.{ext}"
-    full_url = f"{cdnString}/{compiledMD5}.{ext}"
-    thumb_response = requests.head(thumb_url)
-    if thumb_response.status_code != 200 and ext != "jpg":
-        thumb_ext = "jpg"
-        thumb_url = f"{cdnString}/360x360/{compiledMD5}.{thumb_ext}"
-    result.append((thumb_url, full_url))
-  return result
-
 def get_entry_post_id(entry, default_post_id=0):
     id_elem = entry.find(f"{{{NS_ATOM}}}id")
     if id_elem is None or id_elem.text is None:
@@ -56,12 +27,12 @@ def get_entry_post_id(entry, default_post_id=0):
             return default_post_id
 def load_feed(filepath):
     if not os.path.isfile(filepath):
+        # Create minimal feed XML root
         feed = ET.Element(f"{{{NS_ATOM}}}feed")
-        ET.SubElement(feed, f"{{{NS_ATOM}}}title").text = FEED_TITLE
-        ET.SubElement(feed, f"{{{NS_ATOM}}}link", href=FEED_LINK)
-        # ET.SubElement(feed, "updated").text = datetime.utcnow().isoformat() + 'Z'
-        ET.SubElement(feed, f"{{{NS_ATOM}}}updated").text = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-        ET.SubElement(feed, f"{{{NS_ATOM}}}id").text = FEED_ID
+        ET.SubElement(feed, "title").text = FEED_TITLE
+        ET.SubElement(feed, "link", href=FEED_LINK)
+        ET.SubElement(feed, "updated").text = datetime.utcnow().isoformat() + 'Z'
+        ET.SubElement(feed, "id").text = FEED_ID
         return ET.ElementTree(feed)
     else:
         return ET.parse(filepath)
@@ -133,8 +104,8 @@ def create_entry_element(post_id, url, data):
 
     created_at = data.get("created_at", "2025-01-01T00:00:00Z")
     try:
-        created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
-        updated = created_dt.isoformat().replace('+00:00', 'Z')
+        dt = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+        updated = dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     except Exception:
         updated = "2025-01-01T00:00:00Z"
 
@@ -148,28 +119,72 @@ def create_entry_element(post_id, url, data):
     ET.SubElement(entry, "updated").text = updated
 
     content_el = ET.SubElement(entry, "content", type="xhtml")
-    div = ET.SubElement(content_el, "div")
-    div.set("xmlns", NS_XHTML)
+    div = ET.SubElement(content_el, "div", xmlns=NS_XHTML)
     a = ET.SubElement(div, "a", href=img_url)
     ET.SubElement(a, "img", src=thumb_url)
-    custom_images = get_custom_image_urls(url)
-    if custom_images:
-        for custom_thumb, custom_full in custom_images:
-            if custom_thumb and custom_full:
-                a_tag = ET.SubElement(div, "a", href=custom_full)
-                ET.SubElement(a_tag, "img", src=custom_thumb)
 
     author_el = ET.SubElement(entry, "author")
     ET.SubElement(author_el, "name").text = "Ace2k1"
+
+    # rough_string = ET.tostring(entry, encoding="utf-8")
+    # parsed = minidom.parseString(rough_string)
+    # for content in parsed.getElementsByTagName("content"):
+    #     if content.firstChild and content.firstChild.nodeType == content.ELEMENT_NODE:
+    #         div = content.firstChild
+    #         if div.tagName == "div":
+    #             a = div.getElementsByTagName("a")[0]
+    #             img = a.getElementsByTagName("img")[0]
+
+    #             # Add line breaks between elements
+    #             div.insertBefore(parsed.createTextNode("      "), a)
+    #             a.insertBefore(parsed.createTextNode("        "), img)
+    #             a.appendChild(parsed.createTextNode("      "))
+    #             div.appendChild(parsed.createTextNode("    "))
+    #             content.appendChild(parsed.createTextNode("  "))
+
+    # pretty_string = parsed.toprettyxml(indent="  ", encoding="utf-8")
+
+    
     return entry
+
+def normalize_entries_content(root):
+    for entry in root.findall(f"{{{NS_ATOM}}}entry"):
+        content = entry.find(f"{{{NS_ATOM}}}content")
+        if content is not None and content.get("type") == "xhtml":
+            # Clear children
+            for child in list(content):
+                content.remove(child)
+
+            # Rebuild content as clean div/a/img based on links inside entry
+            div = ET.SubElement(content, "div", xmlns=NS_XHTML)
+
+            # Get alternate link and preview link hrefs
+            alternate_link = None
+            preview_link = None
+            for link in entry.findall(f"{{{NS_ATOM}}}link"):
+                rel = link.get("rel")
+                if rel == "alternate":
+                    alternate_link = link.get("href")
+                elif rel == "preview":
+                    preview_link = link.get("href")
+
+            if alternate_link and preview_link:
+                a = ET.SubElement(div, "a", href=alternate_link)
+                ET.SubElement(a, "img", src=preview_link)
+            # else leave empty div if missing
+            # Now indent the rebuilt content subtree (important!)
+            indent_element(content, level=2, indent_per_level=2, base_indent=10)
 
 def append_danbooru_entry(feed_path, post_url):
     tree = load_feed(feed_path)
     root = tree.getroot()
+
     post_id_from_url = get_post_id_from_url(post_url)
+
     if entry_exists(root, post_id_from_url):
         print(f"Entry for post {post_id_from_url} already exists, skipping append.")
         return
+
     api_url = f"https://danbooru.donmai.us/posts/{post_id_from_url}.json"
     try:
         resp = requests.get(api_url)
@@ -178,39 +193,53 @@ def append_danbooru_entry(feed_path, post_url):
     except Exception as e:
         print(f"Error fetching data for post {post_id_from_url}: {e}")
         return
+
     new_entry = create_entry_element(post_id_from_url, post_url, data)
+    print(new_entry)
     indent_element(new_entry, level=0, indent_per_level=2, base_indent=10)
     new_entry.tail = '\n\n' + ' ' * 10
+
     root.append(new_entry)
+    # Sort entries by post ID descending (integer)
     entries = list(root.findall(f"{{{NS_ATOM}}}entry"))
     def sort_key(e):
-        return get_entry_post_id(e, default_post_id=int(post_id_from_url) if e is new_entry else 0)
+        if e is new_entry:
+            return get_entry_post_id(e, default_post_id=int(post_id_from_url))
+        else:
+            return get_entry_post_id(e, default_post_id=0)
     entries_sorted = sorted(entries, key=sort_key, reverse=True)
     # Clear old entries and re-append in order
     for e in root.findall(f"{{{NS_ATOM}}}entry"):
         root.remove(e)
     for e in entries_sorted:
         root.append(e)
+
     # Update feed updated timestamp to now UTC
     updated_el = root.find(f"{{{NS_ATOM}}}updated")
     if updated_el is not None:
-
         updated_el.text = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
         # updated_el.text = datetime.utcnow().isoformat() + "Z"
+
+    # Normalize all entries' content for consistent format
+    normalize_entries_content(root)
+
+    # Indent the whole feed root again to fix indentation after normalization
     indent_element(root, level=0, indent_per_level=2, base_indent=0)
-    xhtml_prefix = f"{{{NS_XHTML}}}"
-    for elem in root.iter():
-        if elem.tag.startswith(xhtml_prefix):
-            elem.tag = elem.tag.replace(xhtml_prefix, '')
-    # 3. Fix missing xmlns on <div> inside <content type="xhtml">
-    for content_el in root.findall(".//{http://www.w3.org/2005/Atom}content"):
-        if content_el.attrib.get("type") == "xhtml":
-            div = content_el.find("div")
-            if div is not None:
-                div.set("xmlns", NS_XHTML)
-    tree.write(feed_path, encoding="utf-8", xml_declaration=True, short_empty_elements=True)
+
+
+    tree.write(feed_path, encoding="utf-8", xml_declaration=True)
+    # pretty_xml = minidom.parseString(ET.tostring(tree.getroot(), encoding="utf-8"))
+    # with open(feed_path, "wb") as f:
+    #     f.write(pretty_xml.toprettyxml(indent="  ", encoding="utf-8"))
     print(f"Appended post {post_id_from_url} and saved feed to {feed_path}")
 
+
+
+# Example usage:
+# if __name__ == "__main__":
+#     feed_file = "danbooru_ref_fav.xml"
+#     post_url_to_add = "https://danbooru.donmai.us/posts/5666182"
+#     append_danbooru_entry(feed_file, post_url_to_add)
 #################################################################################
 def append_multiple_entries(feed_file, post_urls):
     for url in post_urls:
@@ -218,5 +247,18 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
-    post_urls = []
+
+    # You can replace this with reading from a .txt file or another source
+    post_urls = [
+        'https://danbooru.donmai.us/posts/9698601',
+        'https://danbooru.donmai.us/posts/9724690',
+        'https://danbooru.donmai.us/posts/9726649',
+        'https://danbooru.donmai.us/posts/9730644',
+        'https://danbooru.donmai.us/posts/9730651',
+        'https://danbooru.donmai.us/posts/9733160',
+        'https://danbooru.donmai.us/posts/9733163',
+        'https://danbooru.donmai.us/posts/9733167',
+        'https://danbooru.donmai.us/posts/9733170',
+        'https://danbooru.donmai.us/posts/9756658'
+    ]
     append_multiple_entries(feed_file, post_urls)
