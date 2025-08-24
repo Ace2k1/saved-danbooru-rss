@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-08-24T10:07:12Z</updated>
+  <updated>2025-08-24T11:37:59Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
   <entry>
     <title>tsubame_(terasu_mc) drawn by terasu_mc - ID 9841396</title>
@@ -15,6 +15,24 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/34/9c/349c16a3c146f0dfaeebbeeafb3bee82.jpg">
           <img src="https://cdn.donmai.us/360x360/34/9c/349c16a3c146f0dfaeebbeeafb3bee82.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>noa_(blue_archive) drawn by tomohiro_kai - ID 9837143</title>
+    <link href="https://danbooru.donmai.us/posts/9837143" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/46/61/sample-4661dd6f363df7f13ced26b4fdd35e6b.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/46/61/4661dd6f363df7f13ced26b4fdd35e6b.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/9837143</id>
+    <updated>2025-08-22T05:06:38.643000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/46/61/4661dd6f363df7f13ced26b4fdd35e6b.jpg">
+          <img src="https://cdn.donmai.us/360x360/46/61/4661dd6f363df7f13ced26b4fdd35e6b.jpg" />
         </a>
       </div>
     </content>
