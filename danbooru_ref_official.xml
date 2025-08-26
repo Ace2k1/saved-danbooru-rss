@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Official Feed Reference</title>
-  <link href="https://danbooru.donmai.us"/>
-  <updated>2025-08-19T02:26:58.923558Z</updated>
+  <link href="https://danbooru.donmai.us" />
+  <updated>2025-08-26T15:39:49Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
-
   <entry>
     <title>utsumi_erice utsumi_erice_(lancer) drawn by noco_(adamas) - ID 9709944</title>
-    <link href="https://danbooru.donmai.us/posts/9709944" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/24/cd/sample-24cd67207beff9d07142a6dfa33c0068.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/24/cd/24cd67207beff9d07142a6dfa33c0068.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/9709944" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/24/cd/sample-24cd67207beff9d07142a6dfa33c0068.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/24/cd/24cd67207beff9d07142a6dfa33c0068.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/9709944</id>
     <updated>2025-07-29T11:00:54.915000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/24/cd/24cd67207beff9d07142a6dfa33c0068.jpg">
-          <img src="https://cdn.donmai.us/360x360/24/cd/24cd67207beff9d07142a6dfa33c0068.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/24/cd/24cd67207beff9d07142a6dfa33c0068.jpg" />
         </a>
       </div>
     </content>
@@ -23,18 +22,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>doro_(nikke) scarlet_(nikke) drawn by xi_xeong - ID 9693414</title>
-    <link href="https://danbooru.donmai.us/posts/9693414" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/18/ba/sample-18ba8cd757a27c72a909fd865d945890.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/18/ba/18ba8cd757a27c72a909fd865d945890.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/9693414" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/18/ba/sample-18ba8cd757a27c72a909fd865d945890.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/18/ba/18ba8cd757a27c72a909fd865d945890.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/9693414</id>
     <updated>2025-07-26T04:58:05.585000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/18/ba/18ba8cd757a27c72a909fd865d945890.jpg">
-          <img src="https://cdn.donmai.us/360x360/18/ba/18ba8cd757a27c72a909fd865d945890.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/18/ba/18ba8cd757a27c72a909fd865d945890.jpg" />
         </a>
       </div>
     </content>
@@ -42,18 +40,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>nemo_(fate) nurse_nemo_(fate) drawn by astg - ID 9531976</title>
-    <link href="https://danbooru.donmai.us/posts/9531976" rel="alternate"/>
-    <link href="https://cdn.donmai.us/original/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/9531976" rel="alternate" />
+    <link href="https://cdn.donmai.us/original/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/9531976</id>
     <updated>2025-06-25T11:26:47.723000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg">
-          <img src="https://cdn.donmai.us/360x360/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/70/e3/70e35efb37352eccb5c42cf12dcc386b.jpg" />
         </a>
       </div>
     </content>
@@ -61,18 +58,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>biscione_(fate) drawn by imigimuru - ID 9283962</title>
-    <link href="https://danbooru.donmai.us/posts/9283962" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/d4/c4/sample-d4c4546c8e66b81ce8e5dfb4b873d30c.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/d4/c4/d4c4546c8e66b81ce8e5dfb4b873d30c.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/9283962" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/d4/c4/sample-d4c4546c8e66b81ce8e5dfb4b873d30c.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/d4/c4/d4c4546c8e66b81ce8e5dfb4b873d30c.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/9283962</id>
     <updated>2025-05-10T08:54:10.308000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/d4/c4/d4c4546c8e66b81ce8e5dfb4b873d30c.jpg">
-          <img src="https://cdn.donmai.us/360x360/d4/c4/d4c4546c8e66b81ce8e5dfb4b873d30c.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/d4/c4/d4c4546c8e66b81ce8e5dfb4b873d30c.jpg" />
         </a>
       </div>
     </content>
@@ -80,18 +76,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>kurohime_(fate) kurohime_(third_ascension)_(fate) drawn by mashima_saki_(mashimasa) - ID 9264134</title>
-    <link href="https://danbooru.donmai.us/posts/9264134" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2025/05/07/07/28/59/130133879_p0.png" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/a8/05/a8059fc4658b0d8272d5b2df2c643bfb.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/9264134" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2025/05/07/07/28/59/130133879_p0.png" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/a8/05/a8059fc4658b0d8272d5b2df2c643bfb.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/9264134</id>
     <updated>2025-05-06T19:30:15.081000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/a8/05/a8059fc4658b0d8272d5b2df2c643bfb.png">
-          <img src="https://cdn.donmai.us/360x360/a8/05/a8059fc4658b0d8272d5b2df2c643bfb.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/a8/05/a8059fc4658b0d8272d5b2df2c643bfb.jpg" />
         </a>
       </div>
     </content>
@@ -99,18 +94,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>utsumi_erice utsumi_erice_(swimsuit_avenger)_(third_ascension) voyager_(fate) drawn by noco_(adamas) - ID 8990014</title>
-    <link href="https://danbooru.donmai.us/posts/8990014" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/44/b0/sample-44b0aed0920ed8baf1d9d37d02391bfa.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/44/b0/44b0aed0920ed8baf1d9d37d02391bfa.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/8990014" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/44/b0/sample-44b0aed0920ed8baf1d9d37d02391bfa.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/44/b0/44b0aed0920ed8baf1d9d37d02391bfa.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/8990014</id>
     <updated>2025-03-13T11:01:23.353000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/44/b0/44b0aed0920ed8baf1d9d37d02391bfa.jpg">
-          <img src="https://cdn.donmai.us/360x360/44/b0/44b0aed0920ed8baf1d9d37d02391bfa.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/44/b0/44b0aed0920ed8baf1d9d37d02391bfa.jpg" />
         </a>
       </div>
     </content>
@@ -118,18 +112,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>blanc_(nikke) blanc_(white_rabbit)_(nikke) drawn by dore_(gilles_dore) - ID 8810587</title>
-    <link href="https://danbooru.donmai.us/posts/8810587" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/9e/4f/sample-9e4f8bbe2b1944fa9e429b593739fef0.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/9e/4f/9e4f8bbe2b1944fa9e429b593739fef0.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/8810587" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/9e/4f/sample-9e4f8bbe2b1944fa9e429b593739fef0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/9e/4f/9e4f8bbe2b1944fa9e429b593739fef0.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/8810587</id>
     <updated>2025-02-04T07:52:22.045000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/9e/4f/9e4f8bbe2b1944fa9e429b593739fef0.jpg">
-          <img src="https://cdn.donmai.us/360x360/9e/4f/9e4f8bbe2b1944fa9e429b593739fef0.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/9e/4f/9e4f8bbe2b1944fa9e429b593739fef0.jpg" />
         </a>
       </div>
     </content>
@@ -137,18 +130,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>biscione_(fate) biscione_(first_ascension)_(fate) drawn by imigimuru - ID 8789440</title>
-    <link href="https://danbooru.donmai.us/posts/8789440" rel="alternate"/>
-    <link href="https://cdn.donmai.us/original/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/8789440" rel="alternate" />
+    <link href="https://cdn.donmai.us/original/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/8789440</id>
     <updated>2025-01-31T06:17:57.177000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg">
-          <img src="https://cdn.donmai.us/360x360/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/e9/58/e958de9cd9413c0e8e3ff8423bb166f0.jpg" />
         </a>
       </div>
     </content>
@@ -156,18 +148,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>dobrynya_nikitich_(fate) dobrynya_nikitich_(swimsuit_lancer)_(first_ascension)_(fate) drawn by robina - ID 8615298</title>
-    <link href="https://danbooru.donmai.us/posts/8615298" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/6e/da/sample-6eda9ce2207c1eaa154ef2f940286b70.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/6e/da/6eda9ce2207c1eaa154ef2f940286b70.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/8615298" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/6e/da/sample-6eda9ce2207c1eaa154ef2f940286b70.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/6e/da/6eda9ce2207c1eaa154ef2f940286b70.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/8615298</id>
     <updated>2024-12-25T11:29:31.001000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/6e/da/6eda9ce2207c1eaa154ef2f940286b70.jpg">
-          <img src="https://cdn.donmai.us/360x360/6e/da/6eda9ce2207c1eaa154ef2f940286b70.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/6e/da/6eda9ce2207c1eaa154ef2f940286b70.jpg" />
         </a>
       </div>
     </content>
@@ -175,18 +166,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>dobrynya_nikitich_(fate) dobrynya_nikitich_(swimsuit_lancer)_(first_ascension)_(fate) drawn by robina - ID 8615229</title>
-    <link href="https://danbooru.donmai.us/posts/8615229" rel="alternate"/>
-    <link href="https://cdn.donmai.us/original/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/8615229" rel="alternate" />
+    <link href="https://cdn.donmai.us/original/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/8615229</id>
     <updated>2024-12-25T11:12:15.490000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg">
-          <img src="https://cdn.donmai.us/360x360/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/18/c1/18c16bc3c3f057b2f27a1f3702acefff.jpg" />
         </a>
       </div>
     </content>
@@ -194,18 +184,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>zenobia_(fate) drawn by nishiide_kengorou - ID 7976258</title>
-    <link href="https://danbooru.donmai.us/posts/7976258" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2024/08/10/00/00/15/121337270_p0.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/d6/67/d6670b7e3cd2a4368f70766e56952e3c.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/7976258" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2024/08/10/00/00/15/121337270_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/d6/67/d6670b7e3cd2a4368f70766e56952e3c.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/7976258</id>
     <updated>2024-08-09T11:00:42.818000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/d6/67/d6670b7e3cd2a4368f70766e56952e3c.jpg">
-          <img src="https://cdn.donmai.us/360x360/d6/67/d6670b7e3cd2a4368f70766e56952e3c.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/d6/67/d6670b7e3cd2a4368f70766e56952e3c.jpg" />
         </a>
       </div>
     </content>
@@ -213,18 +202,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>saika_magoichi_(fate) drawn by shirabi - ID 6956999</title>
-    <link href="https://danbooru.donmai.us/posts/6956999" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2023/12/08/00/00/38/114035848_p1.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/1b/fc/1bfcfdd51ab5cb7f243b20a7cf077559.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/6956999" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2023/12/08/00/00/38/114035848_p1.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/1b/fc/1bfcfdd51ab5cb7f243b20a7cf077559.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/6956999</id>
     <updated>2023-12-07T10:01:47.422000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/1b/fc/1bfcfdd51ab5cb7f243b20a7cf077559.jpg">
-          <img src="https://cdn.donmai.us/360x360/1b/fc/1bfcfdd51ab5cb7f243b20a7cf077559.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/1b/fc/1bfcfdd51ab5cb7f243b20a7cf077559.jpg" />
         </a>
       </div>
     </content>
@@ -232,18 +220,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>lady_avalon_(fate) lady_avalon_(first_ascension)_(fate) merlin_(fate/prototype) drawn by taiki_(luster) - ID 6642033</title>
-    <link href="https://danbooru.donmai.us/posts/6642033" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/ff/fc/sample-fffc660123251ab37c01381a6e96409c.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/ff/fc/fffc660123251ab37c01381a6e96409c.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/6642033" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/ff/fc/sample-fffc660123251ab37c01381a6e96409c.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/ff/fc/fffc660123251ab37c01381a6e96409c.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/6642033</id>
     <updated>2023-08-31T07:53:19.769000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/ff/fc/fffc660123251ab37c01381a6e96409c.jpg">
-          <img src="https://cdn.donmai.us/360x360/ff/fc/fffc660123251ab37c01381a6e96409c.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/ff/fc/fffc660123251ab37c01381a6e96409c.jpg" />
         </a>
       </div>
     </content>
@@ -251,18 +238,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>mika_(blue_archive) drawn by yutokamizu - ID 6010737</title>
-    <link href="https://danbooru.donmai.us/posts/6010737" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/c0/b4/sample-c0b443ceeeb06dfdf0c4d786710484c7.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/c0/b4/c0b443ceeeb06dfdf0c4d786710484c7.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/6010737" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/c0/b4/sample-c0b443ceeeb06dfdf0c4d786710484c7.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/c0/b4/c0b443ceeeb06dfdf0c4d786710484c7.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/6010737</id>
     <updated>2023-01-24T04:27:32.332000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/c0/b4/c0b443ceeeb06dfdf0c4d786710484c7.jpg">
-          <img src="https://cdn.donmai.us/360x360/c0/b4/c0b443ceeeb06dfdf0c4d786710484c7.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/c0/b4/c0b443ceeeb06dfdf0c4d786710484c7.jpg" />
         </a>
       </div>
     </content>
@@ -270,18 +256,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>rio_(blue_archive) drawn by mx2j - ID 5971170</title>
-    <link href="https://danbooru.donmai.us/posts/5971170" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/6c/6d/sample-6c6deeb6d77a3db62a99fa816f6f876a.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/6c/6d/6c6deeb6d77a3db62a99fa816f6f876a.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/5971170" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/6c/6d/sample-6c6deeb6d77a3db62a99fa816f6f876a.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/6c/6d/6c6deeb6d77a3db62a99fa816f6f876a.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/5971170</id>
     <updated>2023-01-10T11:55:57.595000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/6c/6d/6c6deeb6d77a3db62a99fa816f6f876a.jpg">
-          <img src="https://cdn.donmai.us/360x360/6c/6d/6c6deeb6d77a3db62a99fa816f6f876a.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/6c/6d/6c6deeb6d77a3db62a99fa816f6f876a.jpg" />
         </a>
       </div>
     </content>
@@ -289,18 +274,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>scarlet_(nikke) drawn by xi_xeong - ID 5961313</title>
-    <link href="https://danbooru.donmai.us/posts/5961313" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/8b/bf/sample-8bbff543c704934a9c43b1ad1daaa731.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/8b/bf/8bbff543c704934a9c43b1ad1daaa731.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/5961313" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/8b/bf/sample-8bbff543c704934a9c43b1ad1daaa731.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/8b/bf/8bbff543c704934a9c43b1ad1daaa731.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/5961313</id>
     <updated>2023-01-07T03:16:18.620000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/8b/bf/8bbff543c704934a9c43b1ad1daaa731.jpg">
-          <img src="https://cdn.donmai.us/360x360/8b/bf/8bbff543c704934a9c43b1ad1daaa731.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/8b/bf/8bbff543c704934a9c43b1ad1daaa731.jpg" />
         </a>
       </div>
     </content>
@@ -308,18 +292,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>lemuen_(arknights) drawn by iris_yi - ID 5680998</title>
-    <link href="https://danbooru.donmai.us/posts/5680998" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/8a/2f/sample-8a2f0b31e737497bed9bef27576052b3.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/8a/2f/8a2f0b31e737497bed9bef27576052b3.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/5680998" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/8a/2f/sample-8a2f0b31e737497bed9bef27576052b3.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/8a/2f/8a2f0b31e737497bed9bef27576052b3.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/5680998</id>
     <updated>2022-09-18T08:11:58.468000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/8a/2f/8a2f0b31e737497bed9bef27576052b3.jpg">
-          <img src="https://cdn.donmai.us/360x360/8a/2f/8a2f0b31e737497bed9bef27576052b3.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/8a/2f/8a2f0b31e737497bed9bef27576052b3.jpg" />
         </a>
       </div>
     </content>
@@ -327,18 +310,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>lady_avalon_(fate) lady_avalon_(second_ascension)_(fate) merlin_(fate/prototype) drawn by taiki_(luster) - ID 5620823</title>
-    <link href="https://danbooru.donmai.us/posts/5620823" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/06/0f/sample-060fd5c7f211c6e378f488343027b13f.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/06/0f/060fd5c7f211c6e378f488343027b13f.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/5620823" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/06/0f/sample-060fd5c7f211c6e378f488343027b13f.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/06/0f/060fd5c7f211c6e378f488343027b13f.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/5620823</id>
     <updated>2022-08-25T14:42:32.686000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/06/0f/060fd5c7f211c6e378f488343027b13f.jpg">
-          <img src="https://cdn.donmai.us/360x360/06/0f/060fd5c7f211c6e378f488343027b13f.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/06/0f/060fd5c7f211c6e378f488343027b13f.jpg" />
         </a>
       </div>
     </content>
@@ -346,18 +328,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>dorothy_(arknights) drawn by jacknife - ID 5468926</title>
-    <link href="https://danbooru.donmai.us/posts/5468926" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/0d/42/sample-0d4289651504a701c122af94fbf46f7b.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/0d/42/0d4289651504a701c122af94fbf46f7b.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/5468926" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/0d/42/sample-0d4289651504a701c122af94fbf46f7b.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/0d/42/0d4289651504a701c122af94fbf46f7b.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/5468926</id>
     <updated>2022-06-29T09:33:14.055000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/0d/42/0d4289651504a701c122af94fbf46f7b.jpg">
-          <img src="https://cdn.donmai.us/360x360/0d/42/0d4289651504a701c122af94fbf46f7b.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/0d/42/0d4289651504a701c122af94fbf46f7b.jpg" />
         </a>
       </div>
     </content>
@@ -365,18 +346,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>tomoe_gozen_(fate) tomoe_gozen_(first_ascension)_(fate) drawn by shirabi - ID 4673987</title>
-    <link href="https://danbooru.donmai.us/posts/4673987" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/7a/87/sample-7a87276bf015048832e84309187cdf11.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/7a/87/7a87276bf015048832e84309187cdf11.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/4673987" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/7a/87/sample-7a87276bf015048832e84309187cdf11.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/7a/87/7a87276bf015048832e84309187cdf11.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/4673987</id>
     <updated>2021-07-31T09:12:49.063000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/7a/87/7a87276bf015048832e84309187cdf11.jpg">
-          <img src="https://cdn.donmai.us/360x360/7a/87/7a87276bf015048832e84309187cdf11.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/7a/87/7a87276bf015048832e84309187cdf11.jpg" />
         </a>
       </div>
     </content>
@@ -384,18 +364,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>tomoe_gozen_(fate) tomoe_gozen_(swimsuit_saber)_(first_ascension)_(fate) drawn by shirabi - ID 4571092</title>
-    <link href="https://danbooru.donmai.us/posts/4571092" rel="alternate"/>
-    <link href="https://cdn.donmai.us/original/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/4571092" rel="alternate" />
+    <link href="https://cdn.donmai.us/original/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/4571092</id>
     <updated>2021-06-08T15:08:52.388000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg">
-          <img src="https://cdn.donmai.us/360x360/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/5d/6a/5d6a0822d644ab8f9bc85c1139dba9ad.jpg" />
         </a>
       </div>
     </content>
@@ -403,18 +382,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>merlin_(fate/prototype) merlin_(second_ascension)_(fate/prototype) drawn by taiki_(luster) - ID 4123098</title>
-    <link href="https://danbooru.donmai.us/posts/4123098" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/b2/2d/sample-b22d1adec8df8dd631f05d54ce57c78a.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/b2/2d/b22d1adec8df8dd631f05d54ce57c78a.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/4123098" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/b2/2d/sample-b22d1adec8df8dd631f05d54ce57c78a.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/b2/2d/b22d1adec8df8dd631f05d54ce57c78a.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/4123098</id>
     <updated>2020-09-27T13:18:17.265000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/b2/2d/b22d1adec8df8dd631f05d54ce57c78a.jpg">
-          <img src="https://cdn.donmai.us/360x360/b2/2d/b22d1adec8df8dd631f05d54ce57c78a.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/b2/2d/b22d1adec8df8dd631f05d54ce57c78a.jpg" />
         </a>
       </div>
     </content>
@@ -422,18 +400,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>nearl_(arknights) nearl_(shimmering_dew)_(arknights) drawn by ryuuzaki_ichi - ID 4019700</title>
-    <link href="https://danbooru.donmai.us/posts/4019700" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2020/07/28/01/28/56/83275287_p0.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/00/33/0033aead6f62cbd53d2ad3a348a71834.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/4019700" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2020/07/28/01/28/56/83275287_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/00/33/0033aead6f62cbd53d2ad3a348a71834.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/4019700</id>
     <updated>2020-07-27T09:02:44.751000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/00/33/0033aead6f62cbd53d2ad3a348a71834.jpg">
-          <img src="https://cdn.donmai.us/360x360/00/33/0033aead6f62cbd53d2ad3a348a71834.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/00/33/0033aead6f62cbd53d2ad3a348a71834.jpg" />
         </a>
       </div>
     </content>
@@ -441,18 +418,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>utsumi_erice utsumi_erice_(lancer) drawn by noco_(adamas) - ID 3931046</title>
-    <link href="https://danbooru.donmai.us/posts/3931046" rel="alternate"/>
-    <link href="https://cdn.donmai.us/original/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/3931046" rel="alternate" />
+    <link href="https://cdn.donmai.us/original/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/3931046</id>
     <updated>2020-05-29T13:51:36.431000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg">
-          <img src="https://cdn.donmai.us/360x360/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/d9/0d/d90d0894804de6d5cb2a15a970eb7aa5.jpg" />
         </a>
       </div>
     </content>
@@ -460,18 +436,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>dobermann_(arknights) nearl_(arknights) drawn by ryuuzaki_ichi - ID 3876765</title>
-    <link href="https://danbooru.donmai.us/posts/3876765" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2020/04/23/20/31/42/81005903_p0.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/eb/e7/ebe7ac5bec58f1810bac6aaa482b07b1.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/3876765" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2020/04/23/20/31/42/81005903_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/eb/e7/ebe7ac5bec58f1810bac6aaa482b07b1.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/3876765</id>
     <updated>2020-04-23T07:39:21.812000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/eb/e7/ebe7ac5bec58f1810bac6aaa482b07b1.jpg">
-          <img src="https://cdn.donmai.us/360x360/eb/e7/ebe7ac5bec58f1810bac6aaa482b07b1.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/eb/e7/ebe7ac5bec58f1810bac6aaa482b07b1.jpg" />
         </a>
       </div>
     </content>
@@ -479,18 +454,17 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>tomoe_gozen_(fate) tomoe_gozen_(first_ascension)_(fate) drawn by shirabi - ID 3676571</title>
-    <link href="https://danbooru.donmai.us/posts/3676571" rel="alternate"/>
-    <link href="https://cdn.donmai.us/sample/51/3f/sample-513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/51/3f/513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/3676571" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/51/3f/sample-513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/51/3f/513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/3676571</id>
     <updated>2019-11-04T00:59:42.362000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/51/3f/513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg">
-          <img src="https://cdn.donmai.us/360x360/51/3f/513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/51/3f/513f8a3d5e6bbf0ad803207cbfeb4ed4.jpg" />
         </a>
       </div>
     </content>
@@ -498,18 +472,47 @@
       <name>Ace2k1</name>
     </author>
   </entry>
-
   <entry>
     <title>tomoe_gozen_(fate) tomoe_gozen_(first_ascension)_(fate) drawn by shirabi - ID 2966214</title>
-    <link href="https://danbooru.donmai.us/posts/2966214" rel="alternate"/>
-    <link href="https://i.pximg.net/img-original/img/2017/12/26/00/00/08/66458244_p0.jpg" rel="related"/>
-    <link href="https://cdn.donmai.us/360x360/c3/e5/c3e59ba49e61259b6970db8249bf98cb.jpg" rel="preview"/>
+    <link href="https://danbooru.donmai.us/posts/2966214" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2017/12/26/00/00/08/66458244_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/c3/e5/c3e59ba49e61259b6970db8249bf98cb.jpg" rel="preview" />
     <id>https://danbooru.donmai.us/posts/2966214</id>
     <updated>2017-12-25T10:40:00.609000Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/c3/e5/c3e59ba49e61259b6970db8249bf98cb.jpg">
-          <img src="https://cdn.donmai.us/360x360/c3/e5/c3e59ba49e61259b6970db8249bf98cb.jpg"/>
+          <img src="https://cdn.donmai.us/360x360/c3/e5/c3e59ba49e61259b6970db8249bf98cb.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>ashikaga_chachamaru drawn by namaniku_atk - ID 2734994</title>
+    <link href="https://danbooru.donmai.us/posts/2734994" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/af/c7/sample-afc702b2bbc02ccb63ac338232185e76.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/af/c7/afc702b2bbc02ccb63ac338232185e76.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/2734994</id>
+    <updated>2017-05-24T21:24:28.530000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/af/c7/afc702b2bbc02ccb63ac338232185e76.png">
+          <img src="https://cdn.donmai.us/360x360/af/c7/afc702b2bbc02ccb63ac338232185e76.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/1f/d5/1fd53ea812fdcc40a9cbe9c1c1c6b5d0.jpg">
+          <img src="https://cdn.donmai.us/360x360/1f/d5/1fd53ea812fdcc40a9cbe9c1c1c6b5d0.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/96/9e/969ebe5a042caa6d5a0a3f7512a766e0.jpg">
+          <img src="https://cdn.donmai.us/360x360/96/9e/969ebe5a042caa6d5a0a3f7512a766e0.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/a0/ed/a0ed6a9d4ba0ffd321eb05f786afc841.jpg">
+          <img src="https://cdn.donmai.us/360x360/a0/ed/a0ed6a9d4ba0ffd321eb05f786afc841.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/72/99/7299e17a82dead32176e632ee2022f14.jpg">
+          <img src="https://cdn.donmai.us/360x360/72/99/7299e17a82dead32176e632ee2022f14.jpg" />
         </a>
       </div>
     </content>
