@@ -2,9 +2,12 @@ import requests
 from datetime import datetime, timezone
 from html import escape
 urls = list(
-  []
+  ['https://danbooru.donmai.us/posts/2734994']
 )
-image_info = {}
+image_info = {
+  "https://danbooru.donmai.us/posts/2734994":[("1fd53ea812fdcc40a9cbe9c1c1c6b5d0","jpg"), ("969ebe5a042caa6d5a0a3f7512a766e0","jpg"), ("a0ed6a9d4ba0ffd321eb05f786afc841","jpg"), ("7299e17a82dead32176e632ee2022f14","jpg")],
+  "https://danbooru.donmai.us/posts/588747" : ('https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png','link')
+}
 def get_custom_image_urls(post_url):
   """
   Return custom (thumb_url, full_url) tuples for a given post.
@@ -17,14 +20,17 @@ def get_custom_image_urls(post_url):
   result = []
   cdnString = "https://cdn.donmai.us"
   for md5, ext in image_entries:
-    subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
-    thumb_url = f"{cdnString}/360x360/{subpath}.jpg"
-    full_url = f"{cdnString}/{subpath}.{ext}"
-    thumb_response = requests.head(thumb_url)
-    if thumb_response.status_code != 200 and ext != "jpg":
-      thumb_ext = "jpg"
-      thumb_url = f"{cdnString}/360x360/{compiledMD5}.{thumb_ext}"
-    result.append((thumb_url, full_url))
+    if ext =='link':
+      result.append((md5, md5))
+    else:
+      subpath = f"{md5[0:2]}/{md5[2:4]}/{md5}"
+      thumb_url = f"{cdnString}/360x360/{subpath}.jpg"
+      full_url = f"{cdnString}/{subpath}.{ext}"
+      thumb_response = requests.head(thumb_url)
+      if thumb_response.status_code != 200 and ext != "jpg":
+        thumb_ext = "jpg"
+        thumb_url = f"{cdnString}/360x360/{compiledMD5}.{thumb_ext}"
+      result.append((thumb_url, full_url))
   return result
 
 indent_spaces = 8
@@ -108,6 +114,6 @@ for url in urls:
     except Exception as e:
         print(f"Error on post {post_id}: {e}")
 feed += "</feed>"
-with open("danbooru_ref_official.xml", "w", encoding="utf-8") as f:
+with open("danbooru_ref_vn.xml", "w", encoding="utf-8") as f:
   f.write(feed)
-print("RSS feed written to danbooru_ref_official.xml")
+print("RSS feed written to danbooru_ref_vn.xml")

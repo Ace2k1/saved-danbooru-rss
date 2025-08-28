@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ace's Danbooru Official Feed Reference</title>
+  <link href="https://danbooru.donmai.us" />
+  <updated>2025-08-28T07:31:54Z</updated>
+  <id>tag:danbooru.donmai.us,2025:/feed</id>
+  <entry>
+    <title>ashikaga_chachamaru drawn by namaniku_atk - ID 2734994</title>
+    <link href="https://danbooru.donmai.us/posts/2734994" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/af/c7/sample-afc702b2bbc02ccb63ac338232185e76.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/af/c7/afc702b2bbc02ccb63ac338232185e76.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/2734994</id>
+    <updated>2017-05-24T21:24:28.530000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/af/c7/afc702b2bbc02ccb63ac338232185e76.png">
+          <img src="https://cdn.donmai.us/360x360/af/c7/afc702b2bbc02ccb63ac338232185e76.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/1f/d5/1fd53ea812fdcc40a9cbe9c1c1c6b5d0.jpg">
+          <img src="https://cdn.donmai.us/360x360/1f/d5/1fd53ea812fdcc40a9cbe9c1c1c6b5d0.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/96/9e/969ebe5a042caa6d5a0a3f7512a766e0.jpg">
+          <img src="https://cdn.donmai.us/360x360/96/9e/969ebe5a042caa6d5a0a3f7512a766e0.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/a0/ed/a0ed6a9d4ba0ffd321eb05f786afc841.jpg">
+          <img src="https://cdn.donmai.us/360x360/a0/ed/a0ed6a9d4ba0ffd321eb05f786afc841.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/72/99/7299e17a82dead32176e632ee2022f14.jpg">
+          <img src="https://cdn.donmai.us/360x360/72/99/7299e17a82dead32176e632ee2022f14.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>ouji_misao drawn by namaniku_atk - ID 588747</title>
+    <link href="https://danbooru.donmai.us/posts/588747" rel="alternate" />
+    <link href="https://cdn.donmai.us/original/0f/dc/0fdcedb1becdcbb00301853d53bf478a.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/0f/dc/0fdcedb1becdcbb00301853d53bf478a.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/588747</id>
+    <updated>2009-12-31T00:16:29.851000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/0f/dc/0fdcedb1becdcbb00301853d53bf478a.jpg">
+          <img src="https://cdn.donmai.us/360x360/0f/dc/0fdcedb1becdcbb00301853d53bf478a.jpg" />
+        </a>
+        <a href="https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png">
+          <img src="https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+</feed>
