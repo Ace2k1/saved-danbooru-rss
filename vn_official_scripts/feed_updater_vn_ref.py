@@ -9,7 +9,7 @@ NS_XHTML = "http://www.w3.org/1999/xhtml"
 ET.register_namespace('', NS_ATOM)
 # ET.register_namespace('xhtml', NS_XHTML)
 FEED_ID = "tag:danbooru.donmai.us,2025:/feed"
-FEED_TITLE = "Ace's Danbooru Official Feed Reference"
+FEED_TITLE = "Ace's Danbooru VN Feed Reference"
 FEED_LINK = "https://danbooru.donmai.us"
 
 image_info = {

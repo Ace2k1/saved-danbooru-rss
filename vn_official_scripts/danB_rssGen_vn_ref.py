@@ -37,7 +37,7 @@ indent_spaces = 8
 indent = ' ' * indent_spaces
 feed = '''<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ace's Danbooru Official Feed Reference</title>
+  <title>Ace's Danbooru VN Feed Reference</title>
   <link href="https://danbooru.donmai.us"/>
   <updated>{}</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
