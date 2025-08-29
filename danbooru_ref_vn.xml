@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru VN Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-08-29T05:03:38Z</updated>
+  <updated>2025-08-29T06:23:16Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
   <entry>
     <title>naruse_shiroha drawn by na-ga - ID 3543614</title>
@@ -57,6 +57,30 @@
         </a>
         <a href="https://cdn.donmai.us/72/99/7299e17a82dead32176e632ee2022f14.jpg">
           <img src="https://cdn.donmai.us/360x360/72/99/7299e17a82dead32176e632ee2022f14.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>koizuka_mana_(amatsutsumi) drawn by koku - ID 2437671</title>
+    <link href="https://danbooru.donmai.us/posts/2437671" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/58/3d/sample-583dab7732c6cf09ea1d63d3dc3058dd.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/58/3d/583dab7732c6cf09ea1d63d3dc3058dd.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/2437671</id>
+    <updated>2016-07-29T14:32:24.398000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/58/3d/583dab7732c6cf09ea1d63d3dc3058dd.png">
+          <img src="https://cdn.donmai.us/360x360/58/3d/583dab7732c6cf09ea1d63d3dc3058dd.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/4f/3b/4f3be115e73f11bf9ffd5681a41f2cd8.png">
+          <img src="https://cdn.donmai.us/360x360/4f/3b/4f3be115e73f11bf9ffd5681a41f2cd8.jpg" />
+        </a>
+        <a href="https://cdn.donmai.us/08/7d/087d87240f43fbc0fd838820d376ada5.png">
+          <img src="https://cdn.donmai.us/360x360/08/7d/087d87240f43fbc0fd838820d376ada5.jpg" />
         </a>
       </div>
     </content>
