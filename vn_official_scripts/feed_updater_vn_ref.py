@@ -13,8 +13,9 @@ FEED_TITLE = "Ace's Danbooru VN Feed Reference"
 FEED_LINK = "https://danbooru.donmai.us"
 
 image_info = {
-  "https://danbooru.donmai.us/posts/2734994":[("1fd53ea812fdcc40a9cbe9c1c1c6b5d0","jpg"), ("969ebe5a042caa6d5a0a3f7512a766e0","jpg"), ("a0ed6a9d4ba0ffd321eb05f786afc841","jpg"), ("7299e17a82dead32176e632ee2022f14","jpg")],
-  "https://danbooru.donmai.us/posts/588747" : ('https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png','link')
+  'https://danbooru.donmai.us/posts/2734994':[("1fd53ea812fdcc40a9cbe9c1c1c6b5d0","jpg"), ("969ebe5a042caa6d5a0a3f7512a766e0","jpg"), ("a0ed6a9d4ba0ffd321eb05f786afc841","jpg"), ("7299e17a82dead32176e632ee2022f14","jpg")],
+  'https://danbooru.donmai.us/posts/3543614':[('66a65a3dc2a86c5e04b863772cfcee9c','png'), ('42b6021159c19bb89b2c380c1d40c799','png'), ('a8da986286265cfa65f2c3738fe28964','png'), ('56d30fbce646457dd5f7419692c9f3c4','png')],
+  'https://danbooru.donmai.us/posts/588747' : ('https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png','link')
 }
 def get_custom_image_urls(post_url):
   """
@@ -218,5 +219,5 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_vn.xml"
-    post_urls = ['https://danbooru.donmai.us/posts/588747']
+    post_urls = ['https://danbooru.donmai.us/posts/3543614']
     append_multiple_entries(feed_file, post_urls)
