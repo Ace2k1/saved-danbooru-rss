@@ -18,6 +18,7 @@ image_info = {
   "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
   "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
   "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
+  'https://danbooru.donmai.us/posts/9873833': ('313a226113350ac098d0050536f886d0', 'png')
 }
 def get_custom_image_urls(post_url):
   """
@@ -218,5 +219,5 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
-    post_urls = []
+    post_urls = ['https://danbooru.donmai.us/posts/9873833']
     append_multiple_entries(feed_file, post_urls)
