@@ -12,7 +12,14 @@ FEED_ID = "tag:danbooru.donmai.us,2025:/feed"
 FEED_TITLE = "Ace's Danbooru Official Feed Reference"
 FEED_LINK = "https://danbooru.donmai.us"
 
-image_info = {}
+image_info = {
+  'https://danbooru.donmai.us/posts/4790160' : [('cd336ca84cbd697f7bcde90fadbdfbcd','jpg'), ('fdb6b2929d4854a68ef2078c65874fbf','png'), ('6b36a4f8bf8c97388a7af277be004ca0','jpg'), ('1648526866a6b468e7e07b5cb5219ede','jpg')],
+}
+# https://danbooru.donmai.us/posts/4790160
+# cd336ca84cbd697f7bcde90fadbdfbcd.jpg
+# fdb6b2929d4854a68ef2078c65874fbf.png
+# 6b36a4f8bf8c97388a7af277be004ca0.jpg
+# 1648526866a6b468e7e07b5cb5219ede.jpg
 def get_custom_image_urls(post_url):
   """
   Return custom (thumb_url, full_url) tuples for a given post.
