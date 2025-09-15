@@ -220,10 +220,17 @@ def append_multiple_entries(feed_file, post_urls):
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
     post_urls = [
-        'https://danbooru.donmai.us/posts/3256311',
-        'https://danbooru.donmai.us/posts/4244667',
-        'https://danbooru.donmai.us/posts/4189058',
-        'https://danbooru.donmai.us/posts/4036049',
-        'https://danbooru.donmai.us/posts/9935522'
+        'https://danbooru.donmai.us/posts/4286371',
+        'https://danbooru.donmai.us/posts/5504551',
+        'https://danbooru.donmai.us/posts/5821746',
+        'https://danbooru.donmai.us/posts/5821788',
+        'https://danbooru.donmai.us/posts/5821885',
+        'https://danbooru.donmai.us/posts/5821889',
+        'https://danbooru.donmai.us/posts/5821905',
+        'https://danbooru.donmai.us/posts/5821906',
+        'https://danbooru.donmai.us/posts/6285423',
+        'https://danbooru.donmai.us/posts/6326878',
+        'https://danbooru.donmai.us/posts/9918951',
+        'https://danbooru.donmai.us/posts/9960955'
     ]
     append_multiple_entries(feed_file, post_urls)
