@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-09-16T02:37:16Z</updated>
+  <updated>2025-09-16T03:00:16Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
   <entry>
     <title>exosister_irene drawn by satou_kuuki - ID 9960955</title>
@@ -432,24 +432,6 @@
         </a>
         <a href="https://cdn.donmai.us/d5/f0/d5f004a6e39b6f54fa1660a7432890f0.png">
           <img src="https://cdn.donmai.us/360x360/d5/f0/d5f004a6e39b6f54fa1660a7432890f0.jpg" />
-        </a>
-      </div>
-    </content>
-    <author>
-      <name>Ace2k1</name>
-    </author>
-  </entry>
-  <entry>
-    <title>kiyohime_(fate) kiyohime_(third_ascension)_(fate) drawn by housou-kun - ID 9395699</title>
-    <link href="https://danbooru.donmai.us/posts/9395699" rel="alternate" />
-    <link href="https://cdn.donmai.us/sample/3e/89/sample-3e89dfca5f5568d0762b2e2b21b86c05.jpg" rel="related" />
-    <link href="https://cdn.donmai.us/360x360/3e/89/3e89dfca5f5568d0762b2e2b21b86c05.jpg" rel="preview" />
-    <id>https://danbooru.donmai.us/posts/9395699</id>
-    <updated>2025-05-31T22:46:22.508000Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <a href="https://cdn.donmai.us/3e/89/3e89dfca5f5568d0762b2e2b21b86c05.jpg">
-          <img src="https://cdn.donmai.us/360x360/3e/89/3e89dfca5f5568d0762b2e2b21b86c05.jpg" />
         </a>
       </div>
     </content>
@@ -1410,24 +1392,6 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="https://cdn.donmai.us/86/0f/860f42c76e7794b04010ff6f5ff9b02f.jpg">
           <img src="https://cdn.donmai.us/360x360/86/0f/860f42c76e7794b04010ff6f5ff9b02f.jpg" />
-        </a>
-      </div>
-    </content>
-    <author>
-      <name>Ace2k1</name>
-    </author>
-  </entry>
-  <entry>
-    <title>suzumori_mizuki drawn by satou_kuuki - ID 8114443</title>
-    <link href="https://danbooru.donmai.us/posts/8114443" rel="alternate" />
-    <link href="https://cdn.donmai.us/sample/ee/d3/sample-eed39ed587b005f9ac962cdef4c1e74f.jpg" rel="related" />
-    <link href="https://cdn.donmai.us/360x360/ee/d3/eed39ed587b005f9ac962cdef4c1e74f.jpg" rel="preview" />
-    <id>https://danbooru.donmai.us/posts/8114443</id>
-    <updated>2024-09-06T22:59:43.945000Z</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <a href="https://cdn.donmai.us/ee/d3/eed39ed587b005f9ac962cdef4c1e74f.jpg">
-          <img src="https://cdn.donmai.us/360x360/ee/d3/eed39ed587b005f9ac962cdef4c1e74f.jpg" />
         </a>
       </div>
     </content>
