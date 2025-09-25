@@ -19,7 +19,8 @@ image_info = {
     "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
     "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
     "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
-    'https://danbooru.donmai.us/posts/9873833': ('313a226113350ac098d0050536f886d0', 'png')
+    'https://danbooru.donmai.us/posts/9873833': ('313a226113350ac098d0050536f886d0', 'png'),
+    'https://danbooru.donmai.us/posts/10015083': ('48fb9aaf99e314d320e3abc1904bd361', 'jpg'),
 }
 def get_custom_image_urls(post_url):
   """
@@ -220,30 +221,5 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
-    post_urls = [
-        'https://danbooru.donmai.us/posts/9661694',
-        'https://danbooru.donmai.us/posts/9960955',
-        'https://danbooru.donmai.us/posts/9635240',
-        'https://danbooru.donmai.us/posts/9635229',
-        'https://danbooru.donmai.us/posts/9333738',
-        'https://danbooru.donmai.us/posts/9279766',
-        'https://danbooru.donmai.us/posts/8542336',
-        'https://danbooru.donmai.us/posts/8492319',
-        'https://danbooru.donmai.us/posts/7943161',
-        'https://danbooru.donmai.us/posts/7896105',
-        'https://danbooru.donmai.us/posts/7726332',
-        'https://danbooru.donmai.us/posts/7593955',
-        'https://danbooru.donmai.us/posts/7215418',
-        'https://danbooru.donmai.us/posts/7008894',
-        'https://danbooru.donmai.us/posts/6888210',
-        'https://danbooru.donmai.us/posts/6517375',
-        'https://danbooru.donmai.us/posts/6517352',
-        'https://danbooru.donmai.us/posts/6321697',
-        'https://danbooru.donmai.us/posts/6095281',
-        'https://danbooru.donmai.us/posts/5869080',
-        'https://danbooru.donmai.us/posts/5859966',
-        'https://danbooru.donmai.us/posts/5818212',
-        'https://danbooru.donmai.us/posts/5807027',
-        'https://danbooru.donmai.us/posts/5569237'
-    ]
+    post_urls = ['https://danbooru.donmai.us/posts/10015083']
     append_multiple_entries(feed_file, post_urls)
