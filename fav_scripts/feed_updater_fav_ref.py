@@ -11,7 +11,6 @@ ET.register_namespace('', NS_ATOM)
 FEED_ID = "tag:danbooru.donmai.us,2025:/feed"
 FEED_TITLE = "Ace's Danbooru Feed"
 FEED_LINK = "https://danbooru.donmai.us"
-
 image_info = {
     "https://danbooru.donmai.us/posts/9960955": [("4077b4302ecf07c689942738b2345e1e","jpg"),("305fcf0a86e9cbc9571714316c4cf6a2","jpg")],
     "https://danbooru.donmai.us/posts/9416965":[("9498ac2f52b24df4b52260a1e9bc6ec1","png"),("d91087f546ea4d402a3ec49f47e41f64","jpg")],
@@ -21,6 +20,7 @@ image_info = {
     "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
     'https://danbooru.donmai.us/posts/9873833': ('313a226113350ac098d0050536f886d0', 'png'),
     'https://danbooru.donmai.us/posts/10015083': ('48fb9aaf99e314d320e3abc1904bd361', 'jpg'),
+    'https://danbooru.donmai.us/posts/10035363': ('47e41b552ed5964c44c53931e8e95cba', 'jpg')
 }
 def get_custom_image_urls(post_url):
   """
@@ -221,5 +221,5 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
-    post_urls = ['https://danbooru.donmai.us/posts/10015083']
+    post_urls = []
     append_multiple_entries(feed_file, post_urls)
