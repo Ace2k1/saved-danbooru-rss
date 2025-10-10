@@ -8,7 +8,17 @@ image_info = {
   'https://danbooru.donmai.us/posts/2734994':[("1fd53ea812fdcc40a9cbe9c1c1c6b5d0","jpg"), ("969ebe5a042caa6d5a0a3f7512a766e0","jpg"), ("a0ed6a9d4ba0ffd321eb05f786afc841","jpg"), ("7299e17a82dead32176e632ee2022f14","jpg")],
   'https://danbooru.donmai.us/posts/3543614':[('66a65a3dc2a86c5e04b863772cfcee9c','png'), ('42b6021159c19bb89b2c380c1d40c799','png'), ('a8da986286265cfa65f2c3738fe28964','png'), ('56d30fbce646457dd5f7419692c9f3c4','png')],
   'https://danbooru.donmai.us/posts/2437671' : [('4f3be115e73f11bf9ffd5681a41f2cd8','png'), ('087d87240f43fbc0fd838820d376ada5','png')],
-  'https://danbooru.donmai.us/posts/588747' : ('https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png','link')
+  'https://danbooru.donmai.us/posts/588747' : ('https://raw.githubusercontent.com/Ace2k1/saved-danbooru-rss/main/images/ouji_misao.png','link'),
+  'https://danbooru.donmai.us/posts/9041040' : [('3abe8e8387a433d71658b07ebafbdf5d','jpg'), ('396a16b0b07fdae890fbd29b829d2cf3','jpg'), ('db7f342f5cec1579e51abb8d7191312d','jpg')],
+  'https://danbooru.donmai.us/posts/2517762' :[
+    ('https://img4.gelbooru.com/images/f1/80/f1808bc92b269652a873f96d010e20b0.png','link'),
+    ('https://img4.gelbooru.com/images/c6/5f/c65f8f3fe1ea59c9ab9214ae551009c3.jpeg','link'),
+    ('https://img4.gelbooru.com/images/71/6f/716fcd884df767e4c9347e91753e90c7.png','link'),
+    ('4b89176ac4dfef5dbc4eecf286fe4b63','png'),
+    ('4b89176ac4dfef5dbc4eecf286fe4b63','png'),
+    ('98ebf1b5f432fd9351201302256461da','jpg'),
+    ('85a11ed4f05d6103da067bca474831d2','jpg')
+  ]
 }
 def get_custom_image_urls(post_url):
   """
