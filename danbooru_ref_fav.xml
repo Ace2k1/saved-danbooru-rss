@@ -2,8 +2,44 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-10-01T03:22:50Z</updated>
+  <updated>2025-10-17T04:50:18Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
+  <entry>
+    <title>sofia_(same_ningen) drawn by shiokonbu - ID 10121678</title>
+    <link href="https://danbooru.donmai.us/posts/10121678" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/a2/e8/sample-a2e84e3aa32132e0cc196fa259ca36d1.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/a2/e8/a2e84e3aa32132e0cc196fa259ca36d1.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10121678</id>
+    <updated>2025-10-15T08:24:20.618000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/a2/e8/a2e84e3aa32132e0cc196fa259ca36d1.jpg">
+          <img src="https://cdn.donmai.us/360x360/a2/e8/a2e84e3aa32132e0cc196fa259ca36d1.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>arimura_mao drawn by satou_kuuki - ID 10111123</title>
+    <link href="https://danbooru.donmai.us/posts/10111123" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/61/8a/sample-618a728091a49f4d7a226da28b5c445a.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/61/8a/618a728091a49f4d7a226da28b5c445a.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10111123</id>
+    <updated>2025-10-13T05:44:37.308000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/61/8a/618a728091a49f4d7a226da28b5c445a.jpg">
+          <img src="https://cdn.donmai.us/360x360/61/8a/618a728091a49f4d7a226da28b5c445a.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
   <entry>
     <title>bb_(fate) drawn by uo_denim - ID 10041901</title>
     <link href="https://danbooru.donmai.us/posts/10041901" rel="alternate" />
