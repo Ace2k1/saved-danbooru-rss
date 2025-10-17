@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-10-17T04:50:18Z</updated>
+  <updated>2025-10-17T06:11:32Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
   <entry>
     <title>sofia_(same_ningen) drawn by shiokonbu - ID 10121678</title>
@@ -201,6 +201,24 @@
         </a>
         <a href="https://cdn.donmai.us/48/fb/48fb9aaf99e314d320e3abc1904bd361.jpg">
           <img src="https://cdn.donmai.us/360x360/48/fb/48fb9aaf99e314d320e3abc1904bd361.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Post 9988132 drawn by shiokonbu</title>
+    <link href="https://danbooru.donmai.us/posts/9988132" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2025/09/19/20/34/34/135287983_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/15/de/15deaf754b1583a09fd067f0a4d0dd20.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/9988132</id>
+    <updated>2025-09-19T10:53:48.140000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/15/de/15deaf754b1583a09fd067f0a4d0dd20.jpg">
+          <img src="https://cdn.donmai.us/360x360/15/de/15deaf754b1583a09fd067f0a4d0dd20.jpg" />
         </a>
       </div>
     </content>
