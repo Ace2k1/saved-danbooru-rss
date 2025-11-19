@@ -2,8 +2,44 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-10-17T06:11:32Z</updated>
+  <updated>2025-11-19T09:40:47Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
+  <entry>
+    <title>Post 10245649 drawn by shunichi</title>
+    <link href="https://danbooru.donmai.us/posts/10245649" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/cd/4e/sample-cd4ebe6a1ea175891add35515c3918fe.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/cd/4e/cd4ebe6a1ea175891add35515c3918fe.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10245649</id>
+    <updated>2025-11-08T07:28:52.911000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/cd/4e/cd4ebe6a1ea175891add35515c3918fe.jpg">
+          <img src="https://cdn.donmai.us/360x360/cd/4e/cd4ebe6a1ea175891add35515c3918fe.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>hatsune_miku drawn by housou-kun - ID 10238686</title>
+    <link href="https://danbooru.donmai.us/posts/10238686" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/0c/a4/sample-0ca4963d695bb17669315c1a79f5f062.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/0c/a4/0ca4963d695bb17669315c1a79f5f062.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10238686</id>
+    <updated>2025-11-06T17:39:55.172000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/0c/a4/0ca4963d695bb17669315c1a79f5f062.jpg">
+          <img src="https://cdn.donmai.us/360x360/0c/a4/0ca4963d695bb17669315c1a79f5f062.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
   <entry>
     <title>sofia_(same_ningen) drawn by shiokonbu - ID 10121678</title>
     <link href="https://danbooru.donmai.us/posts/10121678" rel="alternate" />

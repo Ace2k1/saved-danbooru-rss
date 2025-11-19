@@ -221,5 +221,5 @@ def append_multiple_entries(feed_file, post_urls):
 
 if __name__ == "__main__":
     feed_file = "danbooru_ref_fav.xml"
-    post_urls = ['https://danbooru.donmai.us/posts/9988132']
+    post_urls = []
     append_multiple_entries(feed_file, post_urls)
