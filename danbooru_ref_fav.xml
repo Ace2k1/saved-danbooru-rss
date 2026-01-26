@@ -2,8 +2,80 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ace's Danbooru Feed Reference</title>
   <link href="https://danbooru.donmai.us" />
-  <updated>2025-12-24T09:55:33Z</updated>
+  <updated>2026-01-26T07:07:14Z</updated>
   <id>tag:danbooru.donmai.us,2025:/feed</id>
+  <entry>
+    <title>katsuragi_lilja drawn by satou_kuuki - ID 10668592</title>
+    <link href="https://danbooru.donmai.us/posts/10668592" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/b7/54/sample-b75476fe65635f5b315073248719d661.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/b7/54/b75476fe65635f5b315073248719d661.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10668592</id>
+    <updated>2026-01-25T04:01:16.265000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/b7/54/b75476fe65635f5b315073248719d661.jpg">
+          <img src="https://cdn.donmai.us/360x360/b7/54/b75476fe65635f5b315073248719d661.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>hatsune_miku drawn by housou-kun - ID 10562754</title>
+    <link href="https://danbooru.donmai.us/posts/10562754" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2026/01/06/22/55/23/139611593_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/95/47/9547df1d60658f1a16f4fb3a8441ba11.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10562754</id>
+    <updated>2026-01-06T08:56:33.201000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/95/47/9547df1d60658f1a16f4fb3a8441ba11.jpg">
+          <img src="https://cdn.donmai.us/360x360/95/47/9547df1d60658f1a16f4fb3a8441ba11.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>katsuragi_lilja drawn by satou_kuuki - ID 10551425</title>
+    <link href="https://danbooru.donmai.us/posts/10551425" rel="alternate" />
+    <link href="https://cdn.donmai.us/sample/e0/f7/sample-e0f78c603f6242b97cb8dfe21de0f251.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/e0/f7/e0f78c603f6242b97cb8dfe21de0f251.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10551425</id>
+    <updated>2026-01-04T04:14:57.151000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/e0/f7/e0f78c603f6242b97cb8dfe21de0f251.jpg">
+          <img src="https://cdn.donmai.us/360x360/e0/f7/e0f78c603f6242b97cb8dfe21de0f251.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Post 10534697 drawn by shiokonbu</title>
+    <link href="https://danbooru.donmai.us/posts/10534697" rel="alternate" />
+    <link href="https://i.pximg.net/img-original/img/2026/01/01/23/31/06/139396042_p0.jpg" rel="related" />
+    <link href="https://cdn.donmai.us/360x360/74/e6/74e6eda6780ba80cc4abc33ea0004136.jpg" rel="preview" />
+    <id>https://danbooru.donmai.us/posts/10534697</id>
+    <updated>2026-01-01T09:31:52.363000Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <a href="https://cdn.donmai.us/74/e6/74e6eda6780ba80cc4abc33ea0004136.jpg">
+          <img src="https://cdn.donmai.us/360x360/74/e6/74e6eda6780ba80cc4abc33ea0004136.jpg" />
+        </a>
+      </div>
+    </content>
+    <author>
+      <name>Ace2k1</name>
+    </author>
+  </entry>
   <entry>
     <title>nonohara_yuka drawn by shiokonbu - ID 10484240</title>
     <link href="https://danbooru.donmai.us/posts/10484240" rel="alternate" />
