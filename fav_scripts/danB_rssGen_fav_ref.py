@@ -6,11 +6,16 @@ urls = list(
 )
 image_info = {
   "https://danbooru.donmai.us/posts/9416965":[("9498ac2f52b24df4b52260a1e9bc6ec1","png"),("d91087f546ea4d402a3ec49f47e41f64","jpg")],
+  "https://danbooru.donmai.us/posts/9960955": [("4077b4302ecf07c689942738b2345e1e","jpg"),("305fcf0a86e9cbc9571714316c4cf6a2","jpg")],
   "https://danbooru.donmai.us/posts/9402123":[("c77c28c2731d77637573604c2344048d","jpg"),("d5f004a6e39b6f54fa1660a7432890f0","png")],
   "https://danbooru.donmai.us/posts/9386232": ("7fc35a56d0cca8b957616fad43e9afa6","jpg"),
   "https://danbooru.donmai.us/posts/9343884": ("5d48620689d4dc5a40ef5ab44a5c6ea2", "jpg"),
   "https://danbooru.donmai.us/posts/4624471": ("44de7554b8287cad2630646996125b95", "jpg"),
-}
+  "https://danbooru.donmai.us/posts/9873833": ("313a226113350ac098d0050536f886d0", "png"),
+  "https://danbooru.donmai.us/posts/10015083": ("48fb9aaf99e314d320e3abc1904bd361", "jpg"),
+  "https://danbooru.donmai.us/posts/10035363": ("47e41b552ed5964c44c53931e8e95cba", "jpg"),
+  "https://danbooru.donmai.us/posts/10850784": [("9254fb97eb55b377020e0c8acf1f1369", "jpg"),("f17d9251965a490d4fc5b7ac1b3170eb", "jpg")]
+  }
 def get_custom_image_urls(post_url):
   """
   Return custom (thumb_url, full_url) tuples for a given post.
